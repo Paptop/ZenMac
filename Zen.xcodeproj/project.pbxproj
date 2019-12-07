@@ -7,24 +7,96 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F7199503239BE8A0009314C3 /* libfreetype.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F71994FD239BE4CD009314C3 /* libfreetype.a */; };
+		F7199506239BEB11009314C3 /* imgui_impl_glfw.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F7199505239BEB11009314C3 /* imgui_impl_glfw.cpp */; };
+		F719950A239BEB90009314C3 /* imgui_impl_opengl3.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F7199509239BEB90009314C3 /* imgui_impl_opengl3.cpp */; };
+		F7199511239BF58D009314C3 /* ZSandbox.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F7199510239BF58D009314C3 /* ZSandbox.cpp */; };
 		F743EE842396E3EF0025492C /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F743EE832396E3EF0025492C /* main.cpp */; };
+		F743F2602396E4DF0025492C /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F743F25F2396E4DF0025492C /* OpenGL.framework */; };
+		F743F2642396E9DB0025492C /* glad.c in Sources */ = {isa = PBXBuildFile; fileRef = F743F2632396E9DB0025492C /* glad.c */; };
+		F743F26B2396ED750025492C /* libglfw3.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F743F2612396E7C00025492C /* libglfw3.a */; };
+		F743F26C2396EFFC0025492C /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F743F2652396ED0A0025492C /* Cocoa.framework */; };
+		F743F26D2396F0130025492C /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F743F2692396ED320025492C /* IOKit.framework */; };
+		F743F26E2396F0530025492C /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F743F2672396ED1B0025492C /* CoreVideo.framework */; };
+		F743F356239BDF770025492C /* imgui_freetype.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F743F273239BDF760025492C /* imgui_freetype.cpp */; };
+		F743F357239BDF770025492C /* imgui_stdlib.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F743F27B239BDF760025492C /* imgui_stdlib.cpp */; };
+		F743F359239BDF770025492C /* imgui_widgets.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F743F288239BDF760025492C /* imgui_widgets.cpp */; };
+		F743F35A239BDF770025492C /* imgui.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F743F291239BDF760025492C /* imgui.cpp */; };
+		F743F38D239BDF770025492C /* imgui_demo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F743F34B239BDF770025492C /* imgui_demo.cpp */; };
+		F743F38E239BDF770025492C /* imgui_draw.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F743F34C239BDF770025492C /* imgui_draw.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		F743EE7E2396E3EF0025492C /* CopyFiles */ = {
+		F743EE7E2396E3EF0025492C /* Copy Files */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = /usr/share/man/man1/;
 			dstSubfolderSpec = 0;
 			files = (
 			);
+			name = "Copy Files";
 			runOnlyForDeploymentPostprocessing = 1;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		F71994FD239BE4CD009314C3 /* libfreetype.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libfreetype.a; path = ../../libfreetype.a; sourceTree = "<group>"; };
+		F71994FF239BE85A009314C3 /* libfreetype.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libfreetype.dylib; path = ../../libfreetype.dylib; sourceTree = "<group>"; };
+		F7199504239BEA23009314C3 /* Zen.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Zen.entitlements; sourceTree = "<group>"; };
+		F7199505239BEB11009314C3 /* imgui_impl_glfw.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = imgui_impl_glfw.cpp; path = examples/imgui_impl_glfw.cpp; sourceTree = "<group>"; };
+		F7199507239BEB19009314C3 /* imgui_impl_glfw.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = imgui_impl_glfw.h; path = examples/imgui_impl_glfw.h; sourceTree = "<group>"; };
+		F7199508239BEB88009314C3 /* imgui_impl_opengl3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = imgui_impl_opengl3.h; path = examples/imgui_impl_opengl3.h; sourceTree = "<group>"; };
+		F7199509239BEB90009314C3 /* imgui_impl_opengl3.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = imgui_impl_opengl3.cpp; path = examples/imgui_impl_opengl3.cpp; sourceTree = "<group>"; };
+		F719950C239BF29C009314C3 /* ISandbox.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ISandbox.h; sourceTree = "<group>"; };
+		F719950E239BF351009314C3 /* zen_example_triangle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = zen_example_triangle.h; sourceTree = "<group>"; };
+		F719950F239BF47E009314C3 /* ZSandbox.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZSandbox.h; sourceTree = "<group>"; };
+		F7199510239BF58D009314C3 /* ZSandbox.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ZSandbox.cpp; sourceTree = "<group>"; };
+		F7199512239C0919009314C3 /* zen_example_color.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = zen_example_color.h; sourceTree = "<group>"; };
 		F743EE802396E3EF0025492C /* Zen */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Zen; sourceTree = BUILT_PRODUCTS_DIR; };
 		F743EE832396E3EF0025492C /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		F743F25F2396E4DF0025492C /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
+		F743F2612396E7C00025492C /* libglfw3.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libglfw3.a; path = ../../../libglfw3.a; sourceTree = "<group>"; };
+		F743F2632396E9DB0025492C /* glad.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = glad.c; path = External/glad/src/glad.c; sourceTree = "<group>"; };
+		F743F2652396ED0A0025492C /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		F743F2672396ED1B0025492C /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		F743F2692396ED320025492C /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
+		F743F272239BDF760025492C /* imgui_freetype.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = imgui_freetype.h; sourceTree = "<group>"; };
+		F743F273239BDF760025492C /* imgui_freetype.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = imgui_freetype.cpp; sourceTree = "<group>"; };
+		F743F274239BDF760025492C /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		F743F276239BDF760025492C /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
+		F743F277239BDF760025492C /* imgui.natvis */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = imgui.natvis; sourceTree = "<group>"; };
+		F743F279239BDF760025492C /* imgui_stdlib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = imgui_stdlib.h; sourceTree = "<group>"; };
+		F743F27A239BDF760025492C /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
+		F743F27B239BDF760025492C /* imgui_stdlib.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = imgui_stdlib.cpp; sourceTree = "<group>"; };
+		F743F27C239BDF760025492C /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
+		F743F27E239BDF760025492C /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
+		F743F27F239BDF760025492C /* DroidSans.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = DroidSans.ttf; sourceTree = "<group>"; };
+		F743F280239BDF760025492C /* ProggyTiny.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ProggyTiny.ttf; sourceTree = "<group>"; };
+		F743F281239BDF760025492C /* ProggyClean.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ProggyClean.ttf; sourceTree = "<group>"; };
+		F743F282239BDF760025492C /* Cousine-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cousine-Regular.ttf"; sourceTree = "<group>"; };
+		F743F283239BDF760025492C /* Karla-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Karla-Regular.ttf"; sourceTree = "<group>"; };
+		F743F284239BDF760025492C /* binary_to_compressed_c.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = binary_to_compressed_c.cpp; sourceTree = "<group>"; };
+		F743F285239BDF760025492C /* imgui.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = imgui.h; sourceTree = "<group>"; };
+		F743F286239BDF760025492C /* imstb_textedit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = imstb_textedit.h; sourceTree = "<group>"; };
+		F743F287239BDF760025492C /* imconfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = imconfig.h; sourceTree = "<group>"; };
+		F743F288239BDF760025492C /* imgui_widgets.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = imgui_widgets.cpp; sourceTree = "<group>"; };
+		F743F289239BDF760025492C /* imstb_truetype.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = imstb_truetype.h; sourceTree = "<group>"; };
+		F743F28B239BDF760025492C /* TODO.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TODO.txt; sourceTree = "<group>"; };
+		F743F28C239BDF760025492C /* FAQ.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = FAQ.md; sourceTree = "<group>"; };
+		F743F28D239BDF760025492C /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		F743F28E239BDF760025492C /* CHANGELOG.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CHANGELOG.txt; sourceTree = "<group>"; };
+		F743F28F239BDF760025492C /* FONTS.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FONTS.txt; sourceTree = "<group>"; };
+		F743F290239BDF760025492C /* .editorconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .editorconfig; sourceTree = "<group>"; };
+		F743F291239BDF760025492C /* imgui.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = imgui.cpp; sourceTree = "<group>"; };
+		F743F342239BDF770025492C /* imgui_internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = imgui_internal.h; sourceTree = "<group>"; };
+		F743F345239BDF770025492C /* build.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = build.yml; sourceTree = "<group>"; };
+		F743F346239BDF770025492C /* pull_request_template.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = pull_request_template.md; sourceTree = "<group>"; };
+		F743F347239BDF770025492C /* issue_template.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = issue_template.md; sourceTree = "<group>"; };
+		F743F348239BDF770025492C /* .gitattributes */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitattributes; sourceTree = "<group>"; };
+		F743F349239BDF770025492C /* imstb_rectpack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = imstb_rectpack.h; sourceTree = "<group>"; };
+		F743F34A239BDF770025492C /* LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
+		F743F34B239BDF770025492C /* imgui_demo.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = imgui_demo.cpp; sourceTree = "<group>"; };
+		F743F34C239BDF770025492C /* imgui_draw.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = imgui_draw.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,17 +104,47 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F743F26E2396F0530025492C /* CoreVideo.framework in Frameworks */,
+				F743F26D2396F0130025492C /* IOKit.framework in Frameworks */,
+				F743F26C2396EFFC0025492C /* Cocoa.framework in Frameworks */,
+				F743F26B2396ED750025492C /* libglfw3.a in Frameworks */,
+				F743F2602396E4DF0025492C /* OpenGL.framework in Frameworks */,
+				F7199503239BE8A0009314C3 /* libfreetype.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F719950B239BF208009314C3 /* Sandbox */ = {
+			isa = PBXGroup;
+			children = (
+				F719950D239BF30D009314C3 /* Examples */,
+				F719950C239BF29C009314C3 /* ISandbox.h */,
+				F719950F239BF47E009314C3 /* ZSandbox.h */,
+				F7199510239BF58D009314C3 /* ZSandbox.cpp */,
+			);
+			path = Sandbox;
+			sourceTree = "<group>";
+		};
+		F719950D239BF30D009314C3 /* Examples */ = {
+			isa = PBXGroup;
+			children = (
+				F719950E239BF351009314C3 /* zen_example_triangle.h */,
+				F7199512239C0919009314C3 /* zen_example_color.h */,
+			);
+			path = Examples;
+			sourceTree = "<group>";
+		};
 		F743EE772396E3EF0025492C = {
 			isa = PBXGroup;
 			children = (
-				F743EE822396E3EF0025492C /* Zen */,
+				F7199504239BEA23009314C3 /* Zen.entitlements */,
+				F743F2632396E9DB0025492C /* glad.c */,
+				F743F26F239BDF760025492C /* imgui */,
+				F743EE822396E3EF0025492C /* Src */,
 				F743EE812396E3EF0025492C /* Products */,
+				F743F25E2396E4DF0025492C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,12 +156,140 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		F743EE822396E3EF0025492C /* Zen */ = {
+		F743EE822396E3EF0025492C /* Src */ = {
 			isa = PBXGroup;
 			children = (
+				F719950B239BF208009314C3 /* Sandbox */,
 				F743EE832396E3EF0025492C /* main.cpp */,
 			);
-			path = Zen;
+			path = Src;
+			sourceTree = "<group>";
+		};
+		F743F25E2396E4DF0025492C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F71994FF239BE85A009314C3 /* libfreetype.dylib */,
+				F71994FD239BE4CD009314C3 /* libfreetype.a */,
+				F743F2692396ED320025492C /* IOKit.framework */,
+				F743F2672396ED1B0025492C /* CoreVideo.framework */,
+				F743F2652396ED0A0025492C /* Cocoa.framework */,
+				F743F2612396E7C00025492C /* libglfw3.a */,
+				F743F25F2396E4DF0025492C /* OpenGL.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F743F26F239BDF760025492C /* imgui */ = {
+			isa = PBXGroup;
+			children = (
+				F7199509239BEB90009314C3 /* imgui_impl_opengl3.cpp */,
+				F7199508239BEB88009314C3 /* imgui_impl_opengl3.h */,
+				F7199507239BEB19009314C3 /* imgui_impl_glfw.h */,
+				F7199505239BEB11009314C3 /* imgui_impl_glfw.cpp */,
+				F743F270239BDF760025492C /* misc */,
+				F743F285239BDF760025492C /* imgui.h */,
+				F743F286239BDF760025492C /* imstb_textedit.h */,
+				F743F287239BDF760025492C /* imconfig.h */,
+				F743F288239BDF760025492C /* imgui_widgets.cpp */,
+				F743F289239BDF760025492C /* imstb_truetype.h */,
+				F743F28A239BDF760025492C /* docs */,
+				F743F290239BDF760025492C /* .editorconfig */,
+				F743F291239BDF760025492C /* imgui.cpp */,
+				F743F342239BDF770025492C /* imgui_internal.h */,
+				F743F343239BDF770025492C /* .github */,
+				F743F348239BDF770025492C /* .gitattributes */,
+				F743F349239BDF770025492C /* imstb_rectpack.h */,
+				F743F34A239BDF770025492C /* LICENSE.txt */,
+				F743F34B239BDF770025492C /* imgui_demo.cpp */,
+				F743F34C239BDF770025492C /* imgui_draw.cpp */,
+			);
+			name = imgui;
+			path = External/imgui;
+			sourceTree = "<group>";
+		};
+		F743F270239BDF760025492C /* misc */ = {
+			isa = PBXGroup;
+			children = (
+				F743F271239BDF760025492C /* freetype */,
+				F743F275239BDF760025492C /* natvis */,
+				F743F278239BDF760025492C /* cpp */,
+				F743F27C239BDF760025492C /* README.txt */,
+				F743F27D239BDF760025492C /* fonts */,
+			);
+			path = misc;
+			sourceTree = "<group>";
+		};
+		F743F271239BDF760025492C /* freetype */ = {
+			isa = PBXGroup;
+			children = (
+				F743F272239BDF760025492C /* imgui_freetype.h */,
+				F743F273239BDF760025492C /* imgui_freetype.cpp */,
+				F743F274239BDF760025492C /* README.md */,
+			);
+			path = freetype;
+			sourceTree = "<group>";
+		};
+		F743F275239BDF760025492C /* natvis */ = {
+			isa = PBXGroup;
+			children = (
+				F743F276239BDF760025492C /* README.txt */,
+				F743F277239BDF760025492C /* imgui.natvis */,
+			);
+			path = natvis;
+			sourceTree = "<group>";
+		};
+		F743F278239BDF760025492C /* cpp */ = {
+			isa = PBXGroup;
+			children = (
+				F743F279239BDF760025492C /* imgui_stdlib.h */,
+				F743F27A239BDF760025492C /* README.txt */,
+				F743F27B239BDF760025492C /* imgui_stdlib.cpp */,
+			);
+			path = cpp;
+			sourceTree = "<group>";
+		};
+		F743F27D239BDF760025492C /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				F743F27E239BDF760025492C /* Roboto-Medium.ttf */,
+				F743F27F239BDF760025492C /* DroidSans.ttf */,
+				F743F280239BDF760025492C /* ProggyTiny.ttf */,
+				F743F281239BDF760025492C /* ProggyClean.ttf */,
+				F743F282239BDF760025492C /* Cousine-Regular.ttf */,
+				F743F283239BDF760025492C /* Karla-Regular.ttf */,
+				F743F284239BDF760025492C /* binary_to_compressed_c.cpp */,
+			);
+			path = fonts;
+			sourceTree = "<group>";
+		};
+		F743F28A239BDF760025492C /* docs */ = {
+			isa = PBXGroup;
+			children = (
+				F743F28B239BDF760025492C /* TODO.txt */,
+				F743F28C239BDF760025492C /* FAQ.md */,
+				F743F28D239BDF760025492C /* README.md */,
+				F743F28E239BDF760025492C /* CHANGELOG.txt */,
+				F743F28F239BDF760025492C /* FONTS.txt */,
+			);
+			path = docs;
+			sourceTree = "<group>";
+		};
+		F743F343239BDF770025492C /* .github */ = {
+			isa = PBXGroup;
+			children = (
+				F743F344239BDF770025492C /* workflows */,
+				F743F346239BDF770025492C /* pull_request_template.md */,
+				F743F347239BDF770025492C /* issue_template.md */,
+			);
+			path = .github;
+			sourceTree = "<group>";
+		};
+		F743F344239BDF770025492C /* workflows */ = {
+			isa = PBXGroup;
+			children = (
+				F743F345239BDF770025492C /* build.yml */,
+			);
+			path = workflows;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,7 +301,7 @@
 			buildPhases = (
 				F743EE7C2396E3EF0025492C /* Sources */,
 				F743EE7D2396E3EF0025492C /* Frameworks */,
-				F743EE7E2396E3EF0025492C /* CopyFiles */,
+				F743EE7E2396E3EF0025492C /* Copy Files */,
 			);
 			buildRules = (
 			);
@@ -120,6 +350,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				F743EE842396E3EF0025492C /* main.cpp in Sources */,
+				F743F359239BDF770025492C /* imgui_widgets.cpp in Sources */,
+				F719950A239BEB90009314C3 /* imgui_impl_opengl3.cpp in Sources */,
+				F7199506239BEB11009314C3 /* imgui_impl_glfw.cpp in Sources */,
+				F743F357239BDF770025492C /* imgui_stdlib.cpp in Sources */,
+				F743F356239BDF770025492C /* imgui_freetype.cpp in Sources */,
+				F743F35A239BDF770025492C /* imgui.cpp in Sources */,
+				F7199511239BF58D009314C3 /* ZSandbox.cpp in Sources */,
+				F743F38E239BDF770025492C /* imgui_draw.cpp in Sources */,
+				F743F2642396E9DB0025492C /* glad.c in Sources */,
+				F743F38D239BDF770025492C /* imgui_demo.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -238,20 +478,46 @@
 		F743EE882396E3EF0025492C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "c++14";
+				CODE_SIGN_ENTITLEMENTS = Zen.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ACY38URH26;
 				ENABLE_HARDENED_RUNTIME = YES;
+				HEADER_SEARCH_PATHS = (
+					/usr/local/include,
+					/Users/iljajurchenko/Dev/Zen/External/glad/include,
+					/usr/local/Cellar/freetype/2.10.1/include/freetype2,
+				);
+				LIBRARY_SEARCH_PATHS = (
+					/usr/local/lib,
+					"$(PROJECT_DIR)/External/imgui/examples/libs/glfw/lib-vc2010-64",
+					"$(PROJECT_DIR)/External/imgui/examples/libs/glfw/lib-vc2010-32",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = $SRCROOT/Src;
 			};
 			name = Debug;
 		};
 		F743EE892396E3EF0025492C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "c++14";
+				CODE_SIGN_ENTITLEMENTS = Zen.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ACY38URH26;
 				ENABLE_HARDENED_RUNTIME = YES;
+				HEADER_SEARCH_PATHS = (
+					/usr/local/include,
+					/Users/iljajurchenko/Dev/Zen/External/glad/include,
+					/usr/local/Cellar/freetype/2.10.1/include/freetype2,
+				);
+				LIBRARY_SEARCH_PATHS = (
+					/usr/local/lib,
+					"$(PROJECT_DIR)/External/imgui/examples/libs/glfw/lib-vc2010-64",
+					"$(PROJECT_DIR)/External/imgui/examples/libs/glfw/lib-vc2010-32",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = $SRCROOT/Src;
 			};
 			name = Release;
 		};

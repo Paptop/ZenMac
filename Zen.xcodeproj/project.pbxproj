@@ -12,6 +12,7 @@
 		F719950A239BEB90009314C3 /* imgui_impl_opengl3.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F7199509239BEB90009314C3 /* imgui_impl_opengl3.cpp */; };
 		F7199511239BF58D009314C3 /* ZSandbox.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F7199510239BF58D009314C3 /* ZSandbox.cpp */; };
 		F7199516239CE382009314C3 /* ZShaderGL.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F7199515239CE382009314C3 /* ZShaderGL.cpp */; };
+		F719951D239D0EDF009314C3 /* ZFileLoader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F719951C239D0EDF009314C3 /* ZFileLoader.cpp */; };
 		F743EE842396E3EF0025492C /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F743EE832396E3EF0025492C /* main.cpp */; };
 		F743F2602396E4DF0025492C /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F743F25F2396E4DF0025492C /* OpenGL.framework */; };
 		F743F2642396E9DB0025492C /* glad.c in Sources */ = {isa = PBXBuildFile; fileRef = F743F2632396E9DB0025492C /* glad.c */; };
@@ -57,6 +58,11 @@
 		F7199515239CE382009314C3 /* ZShaderGL.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ZShaderGL.cpp; sourceTree = "<group>"; };
 		F7199518239CE4E6009314C3 /* ZType.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZType.h; sourceTree = "<group>"; };
 		F7199519239CE538009314C3 /* ZDebug.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZDebug.h; sourceTree = "<group>"; };
+		F719951B239D0E79009314C3 /* ZFileLoader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZFileLoader.h; sourceTree = "<group>"; };
+		F719951C239D0EDF009314C3 /* ZFileLoader.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ZFileLoader.cpp; sourceTree = "<group>"; };
+		F7199520239D0FB5009314C3 /* triangle.vert */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = triangle.vert; sourceTree = "<group>"; };
+		F7199521239D0FC2009314C3 /* triangle.frag */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = triangle.frag; sourceTree = "<group>"; };
+		F7199523239D1B3C009314C3 /* ZVector.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZVector.h; sourceTree = "<group>"; };
 		F743EE802396E3EF0025492C /* Zen */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Zen; sourceTree = BUILT_PRODUCTS_DIR; };
 		F743EE832396E3EF0025492C /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		F743F25F2396E4DF0025492C /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
@@ -135,7 +141,7 @@
 		F719950D239BF30D009314C3 /* Examples */ = {
 			isa = PBXGroup;
 			children = (
-				F719950E239BF351009314C3 /* zen_example_triangle.h */,
+				F719951E239D0F44009314C3 /* Triangle */,
 				F7199512239C0919009314C3 /* zen_example_color.h */,
 			);
 			path = Examples;
@@ -157,6 +163,41 @@
 				F7199519239CE538009314C3 /* ZDebug.h */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		F719951A239D0E63009314C3 /* IO */ = {
+			isa = PBXGroup;
+			children = (
+				F719951B239D0E79009314C3 /* ZFileLoader.h */,
+				F719951C239D0EDF009314C3 /* ZFileLoader.cpp */,
+			);
+			path = IO;
+			sourceTree = "<group>";
+		};
+		F719951E239D0F44009314C3 /* Triangle */ = {
+			isa = PBXGroup;
+			children = (
+				F719951F239D0F59009314C3 /* GLSL */,
+				F719950E239BF351009314C3 /* zen_example_triangle.h */,
+			);
+			path = Triangle;
+			sourceTree = "<group>";
+		};
+		F719951F239D0F59009314C3 /* GLSL */ = {
+			isa = PBXGroup;
+			children = (
+				F7199520239D0FB5009314C3 /* triangle.vert */,
+				F7199521239D0FC2009314C3 /* triangle.frag */,
+			);
+			path = GLSL;
+			sourceTree = "<group>";
+		};
+		F7199522239D1B24009314C3 /* Math */ = {
+			isa = PBXGroup;
+			children = (
+				F7199523239D1B3C009314C3 /* ZVector.h */,
+			);
+			path = Math;
 			sourceTree = "<group>";
 		};
 		F743EE772396E3EF0025492C = {
@@ -182,6 +223,8 @@
 		F743EE822396E3EF0025492C /* Src */ = {
 			isa = PBXGroup;
 			children = (
+				F7199522239D1B24009314C3 /* Math */,
+				F719951A239D0E63009314C3 /* IO */,
 				F7199517239CE4CD009314C3 /* Utils */,
 				F7199513239CE2ED009314C3 /* GL */,
 				F719950B239BF208009314C3 /* Sandbox */,
@@ -374,6 +417,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F719951D239D0EDF009314C3 /* ZFileLoader.cpp in Sources */,
 				F743EE842396E3EF0025492C /* main.cpp in Sources */,
 				F743F359239BDF770025492C /* imgui_widgets.cpp in Sources */,
 				F7199516239CE382009314C3 /* ZShaderGL.cpp in Sources */,

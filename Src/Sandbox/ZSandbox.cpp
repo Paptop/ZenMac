@@ -3,7 +3,7 @@
 #include "Sandbox/ZSandbox.h"
 
 #include "Sandbox/Examples/zen_example_color.h"
-#include "Sandbox/Examples/zen_example_triangle.h"
+#include "Sandbox/Examples/Triangle/zen_example_triangle.h"
 
 
 #include <glad/glad.h>
@@ -69,12 +69,12 @@ void Zen::ZSandbox::OnClose()
 
 void Zen::ZSandbox::Examples()
 {
-    if (ImGui::Button("zen_example_triangle"))
-    {
-        _activeSandbox = new Zen_Example_Triangle();
-    }
-    else if(ImGui::Button("zen_example_color"))
+    if(ImGui::Button("Color"))
     {
         _activeSandbox = new Zen_Example_Color();
+    }
+    else if (ImGui::Button("Triangle"))
+    {
+        _activeSandbox = new Zen_Example_Triangle();
     }
 }

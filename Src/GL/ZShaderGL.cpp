@@ -2,11 +2,20 @@
 
 #include "Utils/ZDebug.h"
 
+
+Zen::ZShaderGL::ZShaderGL()
+: _iID(-1)
+{
+}
+
 Zen::ZShaderGL::ZShaderGL(const GLchar* vertexShader, const GLchar* fragmentShader)
 {
-    u32 iVertex = CreateAndCompile(GL_VERTEX_SHADER, vertexShader);
-    u32 iFrag = CreateAndCompile(GL_FRAGMENT_SHADER, fragmentShader);
-    CreateProgram(iVertex, iFrag);
+    AssembleProgram(vertexShader, fragmentShader);
+}
+
+void Zen::ZShaderGL::MakeProgram(const GLchar* vertexShader, const GLchar* fragmentShader)
+{
+    AssembleProgram(vertexShader, fragmentShader);
 }
 
 void Zen::ZShaderGL::SetBool(const std::string& name, bool value) const
@@ -28,6 +37,13 @@ void Zen::ZShaderGL::Use()
 {
     ASSERT(_iID >= 0, "Program not set");
     glUseProgram(_iID);
+}
+
+void Zen::ZShaderGL::AssembleProgram(const GLchar* vertexShader, const GLchar* fragmentShader)
+{
+    u32 iVertex = CreateAndCompile(GL_VERTEX_SHADER, vertexShader);
+    u32 iFrag = CreateAndCompile(GL_FRAGMENT_SHADER, fragmentShader);
+    CreateProgram(iVertex, iFrag);
 }
 
 int Zen::ZShaderGL::CreateAndCompile(GLenum shaderType, const GLchar* src)

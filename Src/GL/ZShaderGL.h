@@ -11,7 +11,10 @@ namespace Zen
     class ZShaderGL
     {
     public:
+        ZShaderGL();
         ZShaderGL(const GLchar* vertexShader, const GLchar* fragmentShader);
+        
+        void MakeProgram(const GLchar* vertexShader, const GLchar* fragmentShader);
         
         void SetBool(const std::string& name, bool value)            const;
         void SetInt(const std::string& name, int value)                const;
@@ -20,11 +23,12 @@ namespace Zen
         void Use();
 
     private:
+        void AssembleProgram(const GLchar* vertexShader, const GLchar* fragmentShader);
         int CreateAndCompile(GLenum shaderType, const GLchar* src);
         int CreateProgram(u32 vertexShader, u32 fragmentShader);
+        
     private:
-        //program id;
-        u32 _iID;
+        int         _iID;
     };
 }
 

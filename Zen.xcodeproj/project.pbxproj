@@ -11,6 +11,7 @@
 		F7199506239BEB11009314C3 /* imgui_impl_glfw.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F7199505239BEB11009314C3 /* imgui_impl_glfw.cpp */; };
 		F719950A239BEB90009314C3 /* imgui_impl_opengl3.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F7199509239BEB90009314C3 /* imgui_impl_opengl3.cpp */; };
 		F7199511239BF58D009314C3 /* ZSandbox.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F7199510239BF58D009314C3 /* ZSandbox.cpp */; };
+		F7199516239CE382009314C3 /* ZShaderGL.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F7199515239CE382009314C3 /* ZShaderGL.cpp */; };
 		F743EE842396E3EF0025492C /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F743EE832396E3EF0025492C /* main.cpp */; };
 		F743F2602396E4DF0025492C /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F743F25F2396E4DF0025492C /* OpenGL.framework */; };
 		F743F2642396E9DB0025492C /* glad.c in Sources */ = {isa = PBXBuildFile; fileRef = F743F2632396E9DB0025492C /* glad.c */; };
@@ -52,6 +53,10 @@
 		F719950F239BF47E009314C3 /* ZSandbox.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZSandbox.h; sourceTree = "<group>"; };
 		F7199510239BF58D009314C3 /* ZSandbox.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ZSandbox.cpp; sourceTree = "<group>"; };
 		F7199512239C0919009314C3 /* zen_example_color.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = zen_example_color.h; sourceTree = "<group>"; };
+		F7199514239CE312009314C3 /* ZShaderGL.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZShaderGL.h; sourceTree = "<group>"; };
+		F7199515239CE382009314C3 /* ZShaderGL.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ZShaderGL.cpp; sourceTree = "<group>"; };
+		F7199518239CE4E6009314C3 /* ZType.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZType.h; sourceTree = "<group>"; };
+		F7199519239CE538009314C3 /* ZDebug.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZDebug.h; sourceTree = "<group>"; };
 		F743EE802396E3EF0025492C /* Zen */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Zen; sourceTree = BUILT_PRODUCTS_DIR; };
 		F743EE832396E3EF0025492C /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		F743F25F2396E4DF0025492C /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
@@ -136,6 +141,24 @@
 			path = Examples;
 			sourceTree = "<group>";
 		};
+		F7199513239CE2ED009314C3 /* GL */ = {
+			isa = PBXGroup;
+			children = (
+				F7199514239CE312009314C3 /* ZShaderGL.h */,
+				F7199515239CE382009314C3 /* ZShaderGL.cpp */,
+			);
+			path = GL;
+			sourceTree = "<group>";
+		};
+		F7199517239CE4CD009314C3 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				F7199518239CE4E6009314C3 /* ZType.h */,
+				F7199519239CE538009314C3 /* ZDebug.h */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		F743EE772396E3EF0025492C = {
 			isa = PBXGroup;
 			children = (
@@ -159,6 +182,8 @@
 		F743EE822396E3EF0025492C /* Src */ = {
 			isa = PBXGroup;
 			children = (
+				F7199517239CE4CD009314C3 /* Utils */,
+				F7199513239CE2ED009314C3 /* GL */,
 				F719950B239BF208009314C3 /* Sandbox */,
 				F743EE832396E3EF0025492C /* main.cpp */,
 			);
@@ -351,6 +376,7 @@
 			files = (
 				F743EE842396E3EF0025492C /* main.cpp in Sources */,
 				F743F359239BDF770025492C /* imgui_widgets.cpp in Sources */,
+				F7199516239CE382009314C3 /* ZShaderGL.cpp in Sources */,
 				F719950A239BEB90009314C3 /* imgui_impl_opengl3.cpp in Sources */,
 				F7199506239BEB11009314C3 /* imgui_impl_glfw.cpp in Sources */,
 				F743F357239BDF770025492C /* imgui_stdlib.cpp in Sources */,

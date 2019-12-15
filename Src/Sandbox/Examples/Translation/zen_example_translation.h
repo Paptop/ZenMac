@@ -14,19 +14,6 @@
 #include "IO/ZFileLoader.h"
 #include "GL/ZShaderGL.h"
 
-/*
- M
- [1] [0] [0] [X]
- [0] [1] [0] [Y]
- [0] [0] [1] [Z]
- [0] [0] [0] [1]
- 
- T(M)
- [X] [Y] [Z] [1]
- [0] [0] [1] [0]
- [0] [1] [0] [0]
- [1] [0] [0] [0]
- */
 namespace Zen
 {
     class Zen_Example_Translation : public ISandbox
@@ -44,7 +31,6 @@ namespace Zen
             _aVertex[0] = {-0.5f ,-0.5f, 0.0f};
             _aVertex[1] = {0.0f , 0.5f, 0.0f};
             _aVertex[2] = {0.5f , -0.5f, 0.0f};
-            _aVertex[3] = {0.0f,  0.0f,  1.0f};
             
             glGenVertexArrays(1, &_VAO);
             glGenBuffers(1, &_VBO);
@@ -55,8 +41,9 @@ namespace Zen
             glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, sizeof(ZVector3f), 0);
             glEnableVertexAttribArray(0);
             
-            _pipe.SetScale({2.0f, 2.0f ,2.0f});
-            _pipe.SetRotation({45.0f, 45.0f, 0.0});
+            _scale = {1.0f, 1.0f, 1.0f};
+            _translations = {0.0f, 0.0f, 0.0f};
+            _rotations = {0.0f, 0.0f, 0.0f};
         }
         
         virtual void Render()
@@ -64,10 +51,14 @@ namespace Zen
             glClearColor(0.0f, 0.0f, 0.0f, 0.0f);
             glClear(GL_COLOR_BUFFER_BIT);
             
-            _shader.Use();
+            _pipe.SetScale(_scale);
+            _pipe.SetRotation(_rotations);
+            _pipe.SetTranslation(_translations);
             
             _pipe.GetTransform(_mvp);
-            _shader.SetMatrix4f("MVP", _mvp);
+            _shader.SetMatrix4f("mvp", _mvp);
+            
+            _shader.Use();
             glBindVertexArray(_VAO);
             glDrawArrays(GL_TRIANGLES, 0, 3);
         }
@@ -75,6 +66,7 @@ namespace Zen
         virtual void RenderGUI()
         {
             ImGui::Begin("Zen_Example_Triangle");
+            ImGui::SliderFloat("RotationZ", &_rotations.z, -360.0f, 360.0f);
         }
         
         
@@ -87,6 +79,11 @@ namespace Zen
         const char* _fragPath = "/Users/iljajurchenko/Dev/Zen/Src/Sandbox/Examples/Translation/GLSL/translation.frag";
         u32         _VBO;
         u32         _VAO;
+        
+        //Specific
+        ZVector3f   _rotations;
+        ZVector3f   _translations;
+        ZVector3f   _scale;
     };
 }
 

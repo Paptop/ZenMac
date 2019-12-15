@@ -1,7 +1,8 @@
 #include "gmock/gmock.h"
 
+#include "ZTestMath.h"
+
 int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
-    return 0;
+    testing::InitGoogleTest();
+    return RUN_ALL_TESTS();
 }

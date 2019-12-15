@@ -139,6 +139,7 @@
 		F7E0135C23A676A00097F25C /* libgtest_main.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libgtest_main.a; path = External/googletest/mybuild/lib/libgtest_main.a; sourceTree = "<group>"; };
 		F7E0135D23A676A00097F25C /* libgtest.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libgtest.a; path = External/googletest/mybuild/lib/libgtest.a; sourceTree = "<group>"; };
 		F7E0135E23A676A00097F25C /* libgmock.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libgmock.a; path = External/googletest/mybuild/lib/libgmock.a; sourceTree = "<group>"; };
+		F7E0136323A6B2B90097F25C /* ZTestMath.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZTestMath.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -478,6 +479,7 @@
 			isa = PBXGroup;
 			children = (
 				F7E0135623A6761B0097F25C /* main.cpp */,
+				F7E0136323A6B2B90097F25C /* ZTestMath.h */,
 			);
 			path = ZenTest;
 			sourceTree = "<group>";
@@ -752,6 +754,7 @@
 				HEADER_SEARCH_PATHS = (
 					/Users/iljajurchenko/Dev/Zen/External/googletest/googlemock/include,
 					/Users/iljajurchenko/Dev/Zen/External/googletest/googletest/include,
+					/Users/iljajurchenko/Dev/Zen/Src,
 				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -770,6 +773,7 @@
 				HEADER_SEARCH_PATHS = (
 					/Users/iljajurchenko/Dev/Zen/External/googletest/googlemock/include,
 					/Users/iljajurchenko/Dev/Zen/External/googletest/googletest/include,
+					/Users/iljajurchenko/Dev/Zen/Src,
 				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",

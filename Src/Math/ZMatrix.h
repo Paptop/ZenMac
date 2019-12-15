@@ -23,10 +23,10 @@ namespace Zen
             {
                 for(int j = 0; j < 4; ++j)
                 {
-                    res.m[i][j] = m[0][j] * right.m[i][0] +
-                                  m[1][j] * right.m[i][1] +
-                                  m[2][j] * right.m[i][2] +
-                                  m[3][j] * right.m[i][3];
+                    res.m[i][j] = m[i][0] * right.m[0][j] +
+                                  m[i][1] * right.m[1][j] +
+                                  m[i][2] * right.m[2][j] +
+                                  m[i][3] * right.m[3][j];
                 }
             }
             return res;
@@ -38,14 +38,33 @@ namespace Zen
             {
                 for(int j = 0; j < 4; ++j)
                 {
-                    m[i][j] =     m[0][j] * right.m[i][0] +
-                                  m[1][j] * right.m[i][1] +
-                                  m[2][j] * right.m[i][2] +
-                                  m[3][j] * right.m[i][3];
+                    m[i][j] = m[i][0] * right.m[0][j] +
+                              m[i][1] * right.m[1][j] +
+                              m[i][2] * right.m[2][j] +
+                              m[i][3] * right.m[3][j];
                 }
             }
             
             return (*this);
+        }
+        
+        bool operator==(const ZMatrix4f& right)
+        {
+            bool bEqual = true;
+            for(int i = 0 ; i < 4; ++i)
+            {
+                for(int j = 0 ; j < 4; ++j)
+                {
+                    bEqual &= m[i][j] == right[i][j];
+                }
+            }
+            
+            return bEqual;
+        }
+        
+        const float* operator[](int row) const
+        {
+            return m[row];
         }
         
         float* operator[](int row)
@@ -110,11 +129,11 @@ namespace Zen
             _rotZ[0][0] = cos(rotation.z);  _rotZ[0][1] = -sin(rotation.z);
             _rotZ[1][0] = sin(rotation.z);  _rotZ[1][1] = cos(rotation.z);
             
-            _rotY[0][0] = cos(rotation.z);  _rotY[0][2] = -sin(rotation.z);
-            _rotY[2][0] = sin(rotation.z);  _rotY[2][2] = cos(rotation.z);
+            _rotY[0][0] = cos(rotation.y);  _rotY[0][2] = -sin(rotation.y);
+            _rotY[2][0] = sin(rotation.y);  _rotY[2][2] = cos(rotation.y);
             
-            _rotX[1][1] = cos(rotation.z);  _rotX[1][2] = -sin(rotation.z);
-            _rotX[2][1] = sin(rotation.z);  _rotX[2][2] = cos(rotation.z);
+            _rotX[1][1] = cos(rotation.x);  _rotX[1][2] = -sin(rotation.x);
+            _rotX[2][1] = sin(rotation.x);  _rotX[2][2] = cos(rotation.x);
             
             (*this) *= _rotZ * _rotY * _rotX;
         }

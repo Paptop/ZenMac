@@ -13,6 +13,7 @@
 		F7199511239BF58D009314C3 /* ZSandbox.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F7199510239BF58D009314C3 /* ZSandbox.cpp */; };
 		F7199516239CE382009314C3 /* ZShaderGL.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F7199515239CE382009314C3 /* ZShaderGL.cpp */; };
 		F719951D239D0EDF009314C3 /* ZFileLoader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F719951C239D0EDF009314C3 /* ZFileLoader.cpp */; };
+		F719953523A663D1009314C3 /* ZPipeline.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F719953423A663D1009314C3 /* ZPipeline.cpp */; };
 		F743EE842396E3EF0025492C /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F743EE832396E3EF0025492C /* main.cpp */; };
 		F743F2602396E4DF0025492C /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F743F25F2396E4DF0025492C /* OpenGL.framework */; };
 		F743F2642396E9DB0025492C /* glad.c in Sources */ = {isa = PBXBuildFile; fileRef = F743F2632396E9DB0025492C /* glad.c */; };
@@ -26,6 +27,11 @@
 		F743F35A239BDF770025492C /* imgui.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F743F291239BDF760025492C /* imgui.cpp */; };
 		F743F38D239BDF770025492C /* imgui_demo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F743F34B239BDF770025492C /* imgui_demo.cpp */; };
 		F743F38E239BDF770025492C /* imgui_draw.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F743F34C239BDF770025492C /* imgui_draw.cpp */; };
+		F7E0135723A6761B0097F25C /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F7E0135623A6761B0097F25C /* main.cpp */; };
+		F7E0135F23A676B60097F25C /* libgmock_main.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F7E0135B23A676A00097F25C /* libgmock_main.a */; };
+		F7E0136023A676B60097F25C /* libgmock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F7E0135E23A676A00097F25C /* libgmock.a */; };
+		F7E0136123A676B60097F25C /* libgtest_main.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F7E0135C23A676A00097F25C /* libgtest_main.a */; };
+		F7E0136223A676B60097F25C /* libgtest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F7E0135D23A676A00097F25C /* libgtest.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -37,6 +43,15 @@
 			files = (
 			);
 			name = "Copy Files";
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		F7E0135223A6761B0097F25C /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
 			runOnlyForDeploymentPostprocessing = 1;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -63,6 +78,16 @@
 		F7199520239D0FB5009314C3 /* triangle.vert */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = triangle.vert; sourceTree = "<group>"; };
 		F7199521239D0FC2009314C3 /* triangle.frag */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = triangle.frag; sourceTree = "<group>"; };
 		F7199523239D1B3C009314C3 /* ZVector.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZVector.h; sourceTree = "<group>"; };
+		F7199528239D2E3A009314C3 /* zen_example_color_interpolation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = zen_example_color_interpolation.h; sourceTree = "<group>"; };
+		F7199529239D2FAD009314C3 /* triangle.vert */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = triangle.vert; sourceTree = "<group>"; };
+		F719952A239D2FBC009314C3 /* triangle.frag */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = triangle.frag; sourceTree = "<group>"; };
+		F719952E23A65C8C009314C3 /* ZMatrix.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZMatrix.h; sourceTree = "<group>"; };
+		F719953023A65CF3009314C3 /* zen_example_translation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = zen_example_translation.h; sourceTree = "<group>"; };
+		F719953123A6627F009314C3 /* translation.vert */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = translation.vert; sourceTree = "<group>"; };
+		F719953223A6628D009314C3 /* translation.frag */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = translation.frag; sourceTree = "<group>"; };
+		F719953323A663C4009314C3 /* ZPipeline.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZPipeline.h; sourceTree = "<group>"; };
+		F719953423A663D1009314C3 /* ZPipeline.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ZPipeline.cpp; sourceTree = "<group>"; };
+		F719953623A66C9A009314C3 /* ZMath.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZMath.h; sourceTree = "<group>"; };
 		F743EE802396E3EF0025492C /* Zen */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Zen; sourceTree = BUILT_PRODUCTS_DIR; };
 		F743EE832396E3EF0025492C /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		F743F25F2396E4DF0025492C /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
@@ -108,6 +133,12 @@
 		F743F34A239BDF770025492C /* LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
 		F743F34B239BDF770025492C /* imgui_demo.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = imgui_demo.cpp; sourceTree = "<group>"; };
 		F743F34C239BDF770025492C /* imgui_draw.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = imgui_draw.cpp; sourceTree = "<group>"; };
+		F7E0135423A6761B0097F25C /* ZenTest */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ZenTest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F7E0135623A6761B0097F25C /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		F7E0135B23A676A00097F25C /* libgmock_main.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libgmock_main.a; path = External/googletest/mybuild/lib/libgmock_main.a; sourceTree = "<group>"; };
+		F7E0135C23A676A00097F25C /* libgtest_main.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libgtest_main.a; path = External/googletest/mybuild/lib/libgtest_main.a; sourceTree = "<group>"; };
+		F7E0135D23A676A00097F25C /* libgtest.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libgtest.a; path = External/googletest/mybuild/lib/libgtest.a; sourceTree = "<group>"; };
+		F7E0135E23A676A00097F25C /* libgmock.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libgmock.a; path = External/googletest/mybuild/lib/libgmock.a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +152,17 @@
 				F743F26B2396ED750025492C /* libglfw3.a in Frameworks */,
 				F743F2602396E4DF0025492C /* OpenGL.framework in Frameworks */,
 				F7199503239BE8A0009314C3 /* libfreetype.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F7E0135123A6761B0097F25C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F7E0136123A676B60097F25C /* libgtest_main.a in Frameworks */,
+				F7E0135F23A676B60097F25C /* libgmock_main.a in Frameworks */,
+				F7E0136023A676B60097F25C /* libgmock.a in Frameworks */,
+				F7E0136223A676B60097F25C /* libgtest.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,8 +183,12 @@
 		F719950D239BF30D009314C3 /* Examples */ = {
 			isa = PBXGroup;
 			children = (
+				F719952D23A65C67009314C3 /* Scale */,
+				F719952C23A65C5D009314C3 /* Rotation */,
+				F719952B23A65C53009314C3 /* Translation */,
+				F7199526239D2E0A009314C3 /* ColorInterpolation */,
+				F7199525239D2D8D009314C3 /* Color */,
 				F719951E239D0F44009314C3 /* Triangle */,
-				F7199512239C0919009314C3 /* zen_example_color.h */,
 			);
 			path = Examples;
 			sourceTree = "<group>";
@@ -196,8 +242,70 @@
 			isa = PBXGroup;
 			children = (
 				F7199523239D1B3C009314C3 /* ZVector.h */,
+				F719952E23A65C8C009314C3 /* ZMatrix.h */,
+				F719953323A663C4009314C3 /* ZPipeline.h */,
+				F719953423A663D1009314C3 /* ZPipeline.cpp */,
+				F719953623A66C9A009314C3 /* ZMath.h */,
 			);
 			path = Math;
+			sourceTree = "<group>";
+		};
+		F7199525239D2D8D009314C3 /* Color */ = {
+			isa = PBXGroup;
+			children = (
+				F7199512239C0919009314C3 /* zen_example_color.h */,
+			);
+			path = Color;
+			sourceTree = "<group>";
+		};
+		F7199526239D2E0A009314C3 /* ColorInterpolation */ = {
+			isa = PBXGroup;
+			children = (
+				F7199527239D2E1E009314C3 /* GLSL */,
+				F7199528239D2E3A009314C3 /* zen_example_color_interpolation.h */,
+			);
+			path = ColorInterpolation;
+			sourceTree = "<group>";
+		};
+		F7199527239D2E1E009314C3 /* GLSL */ = {
+			isa = PBXGroup;
+			children = (
+				F7199529239D2FAD009314C3 /* triangle.vert */,
+				F719952A239D2FBC009314C3 /* triangle.frag */,
+			);
+			path = GLSL;
+			sourceTree = "<group>";
+		};
+		F719952B23A65C53009314C3 /* Translation */ = {
+			isa = PBXGroup;
+			children = (
+				F719952F23A65CDD009314C3 /* GLSL */,
+				F719953023A65CF3009314C3 /* zen_example_translation.h */,
+			);
+			path = Translation;
+			sourceTree = "<group>";
+		};
+		F719952C23A65C5D009314C3 /* Rotation */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Rotation;
+			sourceTree = "<group>";
+		};
+		F719952D23A65C67009314C3 /* Scale */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Scale;
+			sourceTree = "<group>";
+		};
+		F719952F23A65CDD009314C3 /* GLSL */ = {
+			isa = PBXGroup;
+			children = (
+				F719953123A6627F009314C3 /* translation.vert */,
+				F719953223A6628D009314C3 /* translation.frag */,
+			);
+			path = GLSL;
 			sourceTree = "<group>";
 		};
 		F743EE772396E3EF0025492C = {
@@ -207,6 +315,7 @@
 				F743F2632396E9DB0025492C /* glad.c */,
 				F743F26F239BDF760025492C /* imgui */,
 				F743EE822396E3EF0025492C /* Src */,
+				F7E0135523A6761B0097F25C /* ZenTest */,
 				F743EE812396E3EF0025492C /* Products */,
 				F743F25E2396E4DF0025492C /* Frameworks */,
 			);
@@ -216,6 +325,7 @@
 			isa = PBXGroup;
 			children = (
 				F743EE802396E3EF0025492C /* Zen */,
+				F7E0135423A6761B0097F25C /* ZenTest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -236,6 +346,10 @@
 		F743F25E2396E4DF0025492C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F7E0135B23A676A00097F25C /* libgmock_main.a */,
+				F7E0135E23A676A00097F25C /* libgmock.a */,
+				F7E0135C23A676A00097F25C /* libgtest_main.a */,
+				F7E0135D23A676A00097F25C /* libgtest.a */,
 				F71994FF239BE85A009314C3 /* libfreetype.dylib */,
 				F71994FD239BE4CD009314C3 /* libfreetype.a */,
 				F743F2692396ED320025492C /* IOKit.framework */,
@@ -360,6 +474,14 @@
 			path = workflows;
 			sourceTree = "<group>";
 		};
+		F7E0135523A6761B0097F25C /* ZenTest */ = {
+			isa = PBXGroup;
+			children = (
+				F7E0135623A6761B0097F25C /* main.cpp */,
+			);
+			path = ZenTest;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -380,6 +502,23 @@
 			productReference = F743EE802396E3EF0025492C /* Zen */;
 			productType = "com.apple.product-type.tool";
 		};
+		F7E0135323A6761B0097F25C /* ZenTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F7E0135A23A6761B0097F25C /* Build configuration list for PBXNativeTarget "ZenTest" */;
+			buildPhases = (
+				F7E0135023A6761B0097F25C /* Sources */,
+				F7E0135123A6761B0097F25C /* Frameworks */,
+				F7E0135223A6761B0097F25C /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ZenTest;
+			productName = ZenTest;
+			productReference = F7E0135423A6761B0097F25C /* ZenTest */;
+			productType = "com.apple.product-type.tool";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -390,6 +529,9 @@
 				ORGANIZATIONNAME = company;
 				TargetAttributes = {
 					F743EE7F2396E3EF0025492C = {
+						CreatedOnToolsVersion = 11.1;
+					};
+					F7E0135323A6761B0097F25C = {
 						CreatedOnToolsVersion = 11.1;
 					};
 				};
@@ -408,6 +550,7 @@
 			projectRoot = "";
 			targets = (
 				F743EE7F2396E3EF0025492C /* Zen */,
+				F7E0135323A6761B0097F25C /* ZenTest */,
 			);
 		};
 /* End PBXProject section */
@@ -423,6 +566,7 @@
 				F7199516239CE382009314C3 /* ZShaderGL.cpp in Sources */,
 				F719950A239BEB90009314C3 /* imgui_impl_opengl3.cpp in Sources */,
 				F7199506239BEB11009314C3 /* imgui_impl_glfw.cpp in Sources */,
+				F719953523A663D1009314C3 /* ZPipeline.cpp in Sources */,
 				F743F357239BDF770025492C /* imgui_stdlib.cpp in Sources */,
 				F743F356239BDF770025492C /* imgui_freetype.cpp in Sources */,
 				F743F35A239BDF770025492C /* imgui.cpp in Sources */,
@@ -430,6 +574,14 @@
 				F743F38E239BDF770025492C /* imgui_draw.cpp in Sources */,
 				F743F2642396E9DB0025492C /* glad.c in Sources */,
 				F743F38D239BDF770025492C /* imgui_demo.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F7E0135023A6761B0097F25C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F7E0135723A6761B0097F25C /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -591,6 +743,42 @@
 			};
 			name = Release;
 		};
+		F7E0135823A6761B0097F25C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ACY38URH26;
+				ENABLE_HARDENED_RUNTIME = YES;
+				HEADER_SEARCH_PATHS = (
+					/Users/iljajurchenko/Dev/Zen/External/googletest/googlemock/include,
+					/Users/iljajurchenko/Dev/Zen/External/googletest/googletest/include,
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/External/googletest/mybuild/lib",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		F7E0135923A6761B0097F25C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ACY38URH26;
+				ENABLE_HARDENED_RUNTIME = YES;
+				HEADER_SEARCH_PATHS = (
+					/Users/iljajurchenko/Dev/Zen/External/googletest/googlemock/include,
+					/Users/iljajurchenko/Dev/Zen/External/googletest/googletest/include,
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/External/googletest/mybuild/lib",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -608,6 +796,15 @@
 			buildConfigurations = (
 				F743EE882396E3EF0025492C /* Debug */,
 				F743EE892396E3EF0025492C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F7E0135A23A6761B0097F25C /* Build configuration list for PBXNativeTarget "ZenTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F7E0135823A6761B0097F25C /* Debug */,
+				F7E0135923A6761B0097F25C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

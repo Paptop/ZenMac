@@ -2,8 +2,10 @@
 
 #include "Sandbox/ZSandbox.h"
 
-#include "Sandbox/Examples/zen_example_color.h"
+#include "Sandbox/Examples/Color/zen_example_color.h"
 #include "Sandbox/Examples/Triangle/zen_example_triangle.h"
+#include "Sandbox/Examples/ColorInterpolation/zen_example_color_interpolation.h"
+#include "Sandbox/Examples/Translation/zen_example_translation.h"
 
 
 #include <glad/glad.h>
@@ -76,5 +78,13 @@ void Zen::ZSandbox::Examples()
     else if (ImGui::Button("Triangle"))
     {
         _activeSandbox = new Zen_Example_Triangle();
+    }
+    else if (ImGui::Button("ColorLerp"))
+    {
+        _activeSandbox = new Zen_Color_Interpolation();
+    }
+    else if (ImGui::Button("Translation"))
+    {
+        _activeSandbox = new Zen_Example_Translation();
     }
 }

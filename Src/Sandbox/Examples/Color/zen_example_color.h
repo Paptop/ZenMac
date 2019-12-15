@@ -29,7 +29,7 @@ namespace Zen
         virtual void RenderGUI()
         {
             ImGui::Begin("Zen_Example_Triangle");
-            ImGui::Text("Hello from another window!");
+            ImGui::Text("Pick a color!");
             ImGui::ColorEdit4("clear color", (float*)&clear_color);
         }
     private:

@@ -33,6 +33,16 @@ void Zen::ZShaderGL::SetFloat(const std::string& name, float value) const
     glUniform1f(glGetUniformLocation(_iID, name.c_str()), value);
 }
 
+void Zen::ZShaderGL::SetVector3f(const std::string& name, float* values) const
+{
+    glUniform3fv(glGetUniformLocation(_iID, name.c_str()), 1, values);
+}
+
+void Zen::ZShaderGL::SetMatrix4f(const std::string& name, const ZMatrix4f& mat) const
+{
+    glUniformMatrix4fv(glGetUniformLocation(_iID, name.c_str()), 1, GL_TRUE, &mat.m[0][0]);
+}
+
 void Zen::ZShaderGL::Use()
 {
     ASSERT(_iID >= 0, "Program not set");

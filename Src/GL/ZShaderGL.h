@@ -2,6 +2,7 @@
 #define ZShaderGL_h
 
 #include "Utils/ZType.h"
+#include "Math/ZMatrix.h"
 
 #include <string>
 #include <glad/glad.h>
@@ -16,9 +17,11 @@ namespace Zen
         
         void MakeProgram(const GLchar* vertexShader, const GLchar* fragmentShader);
         
-        void SetBool(const std::string& name, bool value)            const;
-        void SetInt(const std::string& name, int value)                const;
-        void SetFloat(const std::string& name, float value)            const;
+        void SetBool(const std::string& name, bool value)                const;
+        void SetInt(const std::string& name, int value)                  const;
+        void SetFloat(const std::string& name, float value)              const;
+        void SetVector3f(const std::string& name, float* value)          const;
+        void SetMatrix4f(const std::string& name, const ZMatrix4f& mat)  const;
 
         void Use();
 

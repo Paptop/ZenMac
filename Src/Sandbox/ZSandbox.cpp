@@ -5,7 +5,7 @@
 #include "Sandbox/Examples/Color/zen_example_color.h"
 #include "Sandbox/Examples/Triangle/zen_example_triangle.h"
 #include "Sandbox/Examples/ColorInterpolation/zen_example_color_interpolation.h"
-#include "Sandbox/Examples/Translation/zen_example_translation.h"
+#include "Sandbox/Examples/Transform/zen_example_transform.h"
 
 
 #include <glad/glad.h>
@@ -83,8 +83,8 @@ void Zen::ZSandbox::Examples()
     {
         _activeSandbox = new Zen_Color_Interpolation();
     }
-    else if (ImGui::Button("Translation"))
+    else if (ImGui::Button("Transform"))
     {
-        _activeSandbox = new Zen_Example_Translation();
+        _activeSandbox = new Zen_Example_Transform();
     }
 }

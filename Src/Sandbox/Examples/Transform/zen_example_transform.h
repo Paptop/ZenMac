@@ -16,10 +16,10 @@
 
 namespace Zen
 {
-    class Zen_Example_Translation : public ISandbox
+    class Zen_Example_Transform : public ISandbox
     {
     public:
-        Zen_Example_Translation()
+        Zen_Example_Transform()
         : _shader()
         , _VBO(-1)
         , _VAO(-1)
@@ -86,8 +86,8 @@ namespace Zen
         ZVector3f   _aVertex[4];
         ZMatrix4f   _mvp;
         ZPipeline   _pipe;
-        const char* _vertPath = "/Users/iljajurchenko/Dev/Zen/Src/Sandbox/Examples/Translation/GLSL/translation.vert";
-        const char* _fragPath = "/Users/iljajurchenko/Dev/Zen/Src/Sandbox/Examples/Translation/GLSL/translation.frag";
+        const char* _vertPath = "/Users/iljajurchenko/Dev/Zen/Src/Sandbox/Examples/Transform/GLSL/translation.vert";
+        const char* _fragPath = "/Users/iljajurchenko/Dev/Zen/Src/Sandbox/Examples/Transform/GLSL/translation.frag";
         u32         _VBO;
         u32         _VAO;
         

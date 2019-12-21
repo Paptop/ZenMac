@@ -66,7 +66,11 @@ namespace Zen
         virtual void RenderGUI()
         {
             ImGui::Begin("Zen_Example_Triangle");
+            
+            ImGui::SliderFloat("RotationX", &_rotations.x, -360.0f, 360.0f);
+            ImGui::SliderFloat("RotationY", &_rotations.y, -360.0f, 360.0f);
             ImGui::SliderFloat("RotationZ", &_rotations.z, -360.0f, 360.0f);
+
         }
         
         

@@ -2,6 +2,7 @@
 #define ZMatrix_h
 
 #include <cmath>
+#include <algorithm>
 #include "Math/ZVector.h"
 
 namespace Zen
@@ -47,6 +48,11 @@ namespace Zen
             
             return (*this);
         }
+
+		void operator=(const ZMatrix4f& right)
+		{
+			std::copy(&right[0][0], &right[0][0] + 16, &m[0][0]);
+		}
         
         bool operator==(const ZMatrix4f& right)
         {
@@ -135,7 +141,7 @@ namespace Zen
             _rotX[1][1] = cos(rotation.x);  _rotX[1][2] = -sin(rotation.x);
             _rotX[2][1] = sin(rotation.x);  _rotX[2][2] = cos(rotation.x);
             
-            (*this) *= _rotZ * _rotY * _rotX;
+            (*this) = _rotZ * _rotY * _rotX;
         }
         
     };// struct ZMatrix4f

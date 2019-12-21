@@ -71,6 +71,13 @@ namespace Zen
             ImGui::SliderFloat("RotationY", &_rotations.y, -360.0f, 360.0f);
             ImGui::SliderFloat("RotationZ", &_rotations.z, -360.0f, 360.0f);
 
+			ImGui::SliderFloat("TranslationX", &_translations.x, -1.0f, 1.0f);
+			ImGui::SliderFloat("TranslationY", &_translations.y, -1.0f, 1.0f);
+			ImGui::SliderFloat("TranslationZ", &_translations.z, -1.0f, 1.0f);
+
+			ImGui::SliderFloat("ScaleX", &_scale.x, -2.0f, 2.0f);
+			ImGui::SliderFloat("ScaleY", &_scale.y, -2.0f, 2.0f);
+			ImGui::SliderFloat("ScaleZ", &_scale.z, -2.0f, 2.0f);
         }
         
         

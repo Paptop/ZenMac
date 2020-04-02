@@ -14,6 +14,7 @@
 		F7199516239CE382009314C3 /* ZShaderGL.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F7199515239CE382009314C3 /* ZShaderGL.cpp */; };
 		F719951D239D0EDF009314C3 /* ZFileLoader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F719951C239D0EDF009314C3 /* ZFileLoader.cpp */; };
 		F719953523A663D1009314C3 /* ZPipeline.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F719953423A663D1009314C3 /* ZPipeline.cpp */; };
+		F72C96AA2436070A00146D4C /* ZMath.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F72C96A92436070A00146D4C /* ZMath.cpp */; };
 		F743EE842396E3EF0025492C /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F743EE832396E3EF0025492C /* main.cpp */; };
 		F743F2602396E4DF0025492C /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F743F25F2396E4DF0025492C /* OpenGL.framework */; };
 		F743F2642396E9DB0025492C /* glad.c in Sources */ = {isa = PBXBuildFile; fileRef = F743F2632396E9DB0025492C /* glad.c */; };
@@ -82,12 +83,21 @@
 		F7199529239D2FAD009314C3 /* triangle.vert */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = triangle.vert; sourceTree = "<group>"; };
 		F719952A239D2FBC009314C3 /* triangle.frag */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = triangle.frag; sourceTree = "<group>"; };
 		F719952E23A65C8C009314C3 /* ZMatrix.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZMatrix.h; sourceTree = "<group>"; };
-		F719953023A65CF3009314C3 /* zen_example_translation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = zen_example_translation.h; sourceTree = "<group>"; };
-		F719953123A6627F009314C3 /* translation.vert */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = translation.vert; sourceTree = "<group>"; };
-		F719953223A6628D009314C3 /* translation.frag */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = translation.frag; sourceTree = "<group>"; };
 		F719953323A663C4009314C3 /* ZPipeline.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZPipeline.h; sourceTree = "<group>"; };
 		F719953423A663D1009314C3 /* ZPipeline.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ZPipeline.cpp; sourceTree = "<group>"; };
 		F719953623A66C9A009314C3 /* ZMath.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZMath.h; sourceTree = "<group>"; };
+		F72C969F2435E65600146D4C /* zen_example_transform.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = zen_example_transform.h; sourceTree = "<group>"; };
+		F72C96A12435E65600146D4C /* translation.vert */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = translation.vert; sourceTree = "<group>"; };
+		F72C96A22435E65600146D4C /* translation.frag */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = translation.frag; sourceTree = "<group>"; };
+		F72C96A52435E6F500146D4C /* zen_example_projection.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = zen_example_projection.h; sourceTree = "<group>"; };
+		F72C96A62435E72100146D4C /* projection.vert */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = projection.vert; sourceTree = "<group>"; };
+		F72C96A72435E72F00146D4C /* projection.frag */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = projection.frag; sourceTree = "<group>"; };
+		F72C96A82436017700146D4C /* ZProjection.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZProjection.h; sourceTree = "<group>"; };
+		F72C96A92436070A00146D4C /* ZMath.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ZMath.cpp; sourceTree = "<group>"; };
+		F72C96AD2436452A00146D4C /* zen_example_camera.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = zen_example_camera.h; sourceTree = "<group>"; };
+		F72C96AE2436454900146D4C /* camera.vert */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = camera.vert; sourceTree = "<group>"; };
+		F72C96AF2436455A00146D4C /* camera.frag */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = camera.frag; sourceTree = "<group>"; };
+		F72C96B02436499900146D4C /* ZCamera.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZCamera.h; sourceTree = "<group>"; };
 		F743EE802396E3EF0025492C /* Zen */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Zen; sourceTree = BUILT_PRODUCTS_DIR; };
 		F743EE832396E3EF0025492C /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		F743F25F2396E4DF0025492C /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
@@ -184,9 +194,9 @@
 		F719950D239BF30D009314C3 /* Examples */ = {
 			isa = PBXGroup;
 			children = (
-				F719952D23A65C67009314C3 /* Scale */,
-				F719952C23A65C5D009314C3 /* Rotation */,
-				F719952B23A65C53009314C3 /* Translation */,
+				F72C96AB2436450B00146D4C /* Camera */,
+				F72C96A32435E6C100146D4C /* Projection */,
+				F72C969E2435E65600146D4C /* Transform */,
 				F7199526239D2E0A009314C3 /* ColorInterpolation */,
 				F7199525239D2D8D009314C3 /* Color */,
 				F719951E239D0F44009314C3 /* Triangle */,
@@ -247,6 +257,9 @@
 				F719953323A663C4009314C3 /* ZPipeline.h */,
 				F719953423A663D1009314C3 /* ZPipeline.cpp */,
 				F719953623A66C9A009314C3 /* ZMath.h */,
+				F72C96A82436017700146D4C /* ZProjection.h */,
+				F72C96A92436070A00146D4C /* ZMath.cpp */,
+				F72C96B02436499900146D4C /* ZCamera.h */,
 			);
 			path = Math;
 			sourceTree = "<group>";
@@ -277,34 +290,56 @@
 			path = GLSL;
 			sourceTree = "<group>";
 		};
-		F719952B23A65C53009314C3 /* Translation */ = {
+		F72C969E2435E65600146D4C /* Transform */ = {
 			isa = PBXGroup;
 			children = (
-				F719952F23A65CDD009314C3 /* GLSL */,
-				F719953023A65CF3009314C3 /* zen_example_translation.h */,
+				F72C96A02435E65600146D4C /* GLSL */,
+				F72C969F2435E65600146D4C /* zen_example_transform.h */,
 			);
-			path = Translation;
+			path = Transform;
 			sourceTree = "<group>";
 		};
-		F719952C23A65C5D009314C3 /* Rotation */ = {
+		F72C96A02435E65600146D4C /* GLSL */ = {
 			isa = PBXGroup;
 			children = (
+				F72C96A12435E65600146D4C /* translation.vert */,
+				F72C96A22435E65600146D4C /* translation.frag */,
 			);
-			path = Rotation;
+			path = GLSL;
 			sourceTree = "<group>";
 		};
-		F719952D23A65C67009314C3 /* Scale */ = {
+		F72C96A32435E6C100146D4C /* Projection */ = {
 			isa = PBXGroup;
 			children = (
+				F72C96A42435E6E900146D4C /* GLSL */,
+				F72C96A52435E6F500146D4C /* zen_example_projection.h */,
 			);
-			path = Scale;
+			path = Projection;
 			sourceTree = "<group>";
 		};
-		F719952F23A65CDD009314C3 /* GLSL */ = {
+		F72C96A42435E6E900146D4C /* GLSL */ = {
 			isa = PBXGroup;
 			children = (
-				F719953123A6627F009314C3 /* translation.vert */,
-				F719953223A6628D009314C3 /* translation.frag */,
+				F72C96A62435E72100146D4C /* projection.vert */,
+				F72C96A72435E72F00146D4C /* projection.frag */,
+			);
+			path = GLSL;
+			sourceTree = "<group>";
+		};
+		F72C96AB2436450B00146D4C /* Camera */ = {
+			isa = PBXGroup;
+			children = (
+				F72C96AC2436451900146D4C /* GLSL */,
+				F72C96AD2436452A00146D4C /* zen_example_camera.h */,
+			);
+			path = Camera;
+			sourceTree = "<group>";
+		};
+		F72C96AC2436451900146D4C /* GLSL */ = {
+			isa = PBXGroup;
+			children = (
+				F72C96AE2436454900146D4C /* camera.vert */,
+				F72C96AF2436455A00146D4C /* camera.frag */,
 			);
 			path = GLSL;
 			sourceTree = "<group>";
@@ -562,6 +597,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F72C96AA2436070A00146D4C /* ZMath.cpp in Sources */,
 				F719951D239D0EDF009314C3 /* ZFileLoader.cpp in Sources */,
 				F743EE842396E3EF0025492C /* main.cpp in Sources */,
 				F743F359239BDF770025492C /* imgui_widgets.cpp in Sources */,

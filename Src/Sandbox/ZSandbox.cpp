@@ -6,6 +6,8 @@
 #include "Sandbox/Examples/Triangle/zen_example_triangle.h"
 #include "Sandbox/Examples/ColorInterpolation/zen_example_color_interpolation.h"
 #include "Sandbox/Examples/Transform/zen_example_transform.h"
+#include "Sandbox/Examples/Projection/zen_example_projection.h"
+#include "Sandbox/Examples/Camera/zen_example_camera.h"
 
 
 #include <glad/glad.h>
@@ -86,5 +88,13 @@ void Zen::ZSandbox::Examples()
     else if (ImGui::Button("Transform"))
     {
         _activeSandbox = new Zen_Example_Transform();
+    }
+    else if (ImGui::Button("Projection"))
+    {
+        _activeSandbox = new Zen_Example_Projection();
+    }
+    else if (ImGui::Button("Camera"))
+    {
+        _activeSandbox = new Zen_Example_Camera();
     }
 }

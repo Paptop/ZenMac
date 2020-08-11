@@ -16,6 +16,11 @@ void processInput(GLFWwindow *window);
 const unsigned int SCR_WIDTH = 800;
 const unsigned int SCR_HEIGHT = 600;
 
+void key_callback(GLFWwindow* window, int key, int scancode, int action, int mods)
+{
+    ZSANDBOX->KeyPressed(key, action);
+}
+
 int main()
 {
     // glfw: initialize and configure
@@ -58,6 +63,8 @@ int main()
     ImGui_ImplGlfw_InitForOpenGL(window, true);
     ImGui_ImplOpenGL3_Init("#version 150");
     
+    glfwSetKeyCallback(window, key_callback);
+    
     while (!glfwWindowShouldClose(window))
     {
         ImGui_ImplOpenGL3_NewFrame();
@@ -71,7 +78,7 @@ int main()
         glfwSwapBuffers(window);
         glfwPollEvents();
     }
-
+    
     // glfw: terminate, clearing all previously allocated GLFW resources.
     // ------------------------------------------------------------------
     

@@ -19,8 +19,9 @@ namespace Zen
         }
 
         ~ZSandbox();
-        virtual void Render() override;
-        virtual void RenderGUI() override;
+        virtual void Render()                        override;
+        virtual void RenderGUI()                     override;
+        virtual void KeyPressed(int key, int action) override;
         
     private:
         ZSandbox();

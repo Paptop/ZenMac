@@ -98,6 +98,8 @@
 		F72C96AE2436454900146D4C /* camera.vert */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = camera.vert; sourceTree = "<group>"; };
 		F72C96AF2436455A00146D4C /* camera.frag */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = camera.frag; sourceTree = "<group>"; };
 		F72C96B02436499900146D4C /* ZCamera.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZCamera.h; sourceTree = "<group>"; };
+		F738A82F249BB92400F7A972 /* ZSort.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZSort.h; sourceTree = "<group>"; };
+		F738A832249BBB0E00F7A972 /* ZTestAlgo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZTestAlgo.h; sourceTree = "<group>"; };
 		F743EE802396E3EF0025492C /* Zen */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Zen; sourceTree = BUILT_PRODUCTS_DIR; };
 		F743EE832396E3EF0025492C /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		F743F25F2396E4DF0025492C /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
@@ -143,6 +145,7 @@
 		F743F34A239BDF770025492C /* LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
 		F743F34B239BDF770025492C /* imgui_demo.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = imgui_demo.cpp; sourceTree = "<group>"; };
 		F743F34C239BDF770025492C /* imgui_draw.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = imgui_draw.cpp; sourceTree = "<group>"; };
+		F78988C1249F41CB0032F6C6 /* ZSearch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZSearch.h; sourceTree = "<group>"; };
 		F7E0135423A6761B0097F25C /* ZenTest */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ZenTest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7E0135623A6761B0097F25C /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		F7E0135B23A676A00097F25C /* libgmock_main.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libgmock_main.a; path = External/googletest/mybuild/lib/libgmock_main.a; sourceTree = "<group>"; };
@@ -344,6 +347,15 @@
 			path = GLSL;
 			sourceTree = "<group>";
 		};
+		F738A82E249BB90A00F7A972 /* ZAlgo */ = {
+			isa = PBXGroup;
+			children = (
+				F738A82F249BB92400F7A972 /* ZSort.h */,
+				F78988C1249F41CB0032F6C6 /* ZSearch.h */,
+			);
+			path = ZAlgo;
+			sourceTree = "<group>";
+		};
 		F743EE772396E3EF0025492C = {
 			isa = PBXGroup;
 			children = (
@@ -369,6 +381,7 @@
 		F743EE822396E3EF0025492C /* Src */ = {
 			isa = PBXGroup;
 			children = (
+				F738A82E249BB90A00F7A972 /* ZAlgo */,
 				F7199522239D1B24009314C3 /* Math */,
 				F719951A239D0E63009314C3 /* IO */,
 				F7199517239CE4CD009314C3 /* Utils */,
@@ -515,6 +528,7 @@
 			children = (
 				F7E0135623A6761B0097F25C /* main.cpp */,
 				F7E0136323A6B2B90097F25C /* ZTestMath.h */,
+				F738A832249BBB0E00F7A972 /* ZTestAlgo.h */,
 			);
 			path = ZenTest;
 			sourceTree = "<group>";

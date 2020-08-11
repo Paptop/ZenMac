@@ -65,6 +65,16 @@ void Zen::ZSandbox::RenderGUI()
     ImGui::Render();
 }
 
+void Zen::ZSandbox::KeyPressed(int key, int action)
+{
+    if(!_activeSandbox)
+    {
+        return;
+    }
+    
+    _activeSandbox->KeyPressed(key, action);
+}
+
 void Zen::ZSandbox::OnClose()
 {
     delete _activeSandbox;

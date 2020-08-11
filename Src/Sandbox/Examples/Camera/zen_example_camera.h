@@ -6,6 +6,7 @@
 #include "Sandbox/ISandbox.h"
 
 #include <glad/glad.h>
+#include <GLFW/glfw3.h>
 
 #include "Math/ZMatrix.h"
 #include "Math/ZVector.h"
@@ -80,7 +81,7 @@ namespace Zen
             _rotations = {0.0f, 0.0f, 0.0f};
         }
         
-        virtual void Render()
+        virtual void Render() override
         {
             UpdateAnimation(0.0f);
             
@@ -99,7 +100,7 @@ namespace Zen
             glDrawElements(GL_TRIANGLES, sizeof(_aIndices) / sizeof(int), GL_UNSIGNED_INT, 0);
         }
         
-        virtual void RenderGUI()
+        virtual void RenderGUI() override
         {
             ImGui::Begin("Zen_Example_Triangle");
             
@@ -128,6 +129,20 @@ namespace Zen
             ImGui::SliderFloat("CameraPosZ", &_position.z, -10.0f, 10.0f);
         }
         
+        virtual void KeyPressed(int key, int action) override
+        {
+            /*
+             if (key ==  && action == GLFW_PRESS)
+             {
+             }
+             */
+            
+            if(key == GLFW_KEY_W && action == GLFW_PRESS)
+            {
+                _position += (_targetVector * 3.0f);
+            }
+        }
+        
         void UpdateAnimation(float fDelta)
         {
             _fProgress += 0.1f * 0.001f;
@@ -145,7 +160,6 @@ namespace Zen
             _pipe.GetCamera().SetPos(_position);
             _pipe.GetCamera().SetUp(_upVector);
         }
-        
         
     private:
         ZShaderGL   _shader;

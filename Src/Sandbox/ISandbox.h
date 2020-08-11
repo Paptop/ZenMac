@@ -8,6 +8,7 @@ namespace Zen
     public:
         virtual void Render() {};
         virtual void RenderGUI(){};
+        virtual void KeyPressed(int key, int action){};
     };
 }
 

@@ -9,20 +9,6 @@ namespace Zen
     {
         float x, y, z;
         
-        ZVector3f()
-        : x(0)
-        , y(0)
-        , z(0)
-        {
-        }
-        
-        ZVector3f(float xx, float yy, float zz)
-        : x(xx)
-        , y(yy)
-        , z(zz)
-        {
-        }
-        
         ZVector3f Cross(const ZVector3f& v) const
         {
             const float xx = y * v.z - z * v.y;

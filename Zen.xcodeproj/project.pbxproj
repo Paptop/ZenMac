@@ -99,6 +99,7 @@
 		F72C96AF2436455A00146D4C /* camera.frag */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = camera.frag; sourceTree = "<group>"; };
 		F72C96B02436499900146D4C /* ZCamera.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZCamera.h; sourceTree = "<group>"; };
 		F73245A5256D203A00887E29 /* ZGL_Types.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZGL_Types.h; sourceTree = "<group>"; };
+		F73245A6256D49EF00887E29 /* ZMath_types.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZMath_types.h; sourceTree = "<group>"; };
 		F738A82F249BB92400F7A972 /* ZSort.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZSort.h; sourceTree = "<group>"; };
 		F738A832249BBB0E00F7A972 /* ZTestAlgo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZTestAlgo.h; sourceTree = "<group>"; };
 		F743EE802396E3EF0025492C /* Zen */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Zen; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -265,6 +266,7 @@
 				F72C96A82436017700146D4C /* ZProjection.h */,
 				F72C96A92436070A00146D4C /* ZMath.cpp */,
 				F72C96B02436499900146D4C /* ZCamera.h */,
+				F73245A6256D49EF00887E29 /* ZMath_types.h */,
 			);
 			path = Math;
 			sourceTree = "<group>";

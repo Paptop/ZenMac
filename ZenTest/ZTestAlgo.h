@@ -80,4 +80,76 @@ TEST(Search, Binary_Search)
     EXPECT_TRUE(array[index] == 9);
 }
 
+// A.size() > B.size()
+int findSubArray(std::vector<int>& A, std::vector<int>& B)
+{
+    int i = 0;
+    std::vector<int> cur_sub;
+    std::vector<int> largest_sub;
+    
+    while(i < A.size())
+    {
+        bool isSequence = false;
+        
+        for(int j = 0; j < B.size(); ++j)
+        {
+            if(A[i] == B[j])
+            {
+                cur_sub.push_back(A[i]);
+                isSequence = true;
+                i++;
+            }
+            else if (isSequence && A[i] != B[j])
+            {
+                if(cur_sub.size() > largest_sub.size())
+                {
+                    largest_sub = cur_sub;
+                }
+                
+                isSequence = false;
+            }
+        }
+        
+        i -= cur_sub.size();
+        i++;
+    }
+    
+    return largest_sub.size();
+}
+
+void remove_duplicates(std::vector<int>& arr)
+{
+    std::vector<int>::iterator it = arr.begin();
+                                                
+    int prev_value = -1;
+    while(it != arr.end())
+    {
+        if(prev_value == (*it))
+        {
+            it = arr.erase(it);
+        }
+        else
+        {
+            prev_value = (*it);
+            it++;
+        }
+    }
+}
+
+void to_console(const std::vector<int>& vec)
+{
+    std::for_each(vec.begin(), vec.end(), [](int i) { std::cout << i << " "; });
+    std::cout << std::endl;
+}
+
+TEST(Dummy, Dummy)
+{
+    std::vector<int> A = {8, 1, 2, 2, 3};
+    
+    std::sort(A.begin(), A.end());
+    to_console(A);
+    remove_duplicates(A);
+    to_console(A);
+}
+
 #endif /* ZTestAlgo_h */

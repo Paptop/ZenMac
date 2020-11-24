@@ -2,11 +2,11 @@
 
 #include "Sandbox/ZSandbox.h"
 
-#include "Sandbox/Examples/Color/zen_example_color.h"
-#include "Sandbox/Examples/Triangle/zen_example_triangle.h"
-#include "Sandbox/Examples/ColorInterpolation/zen_example_color_interpolation.h"
-#include "Sandbox/Examples/Transform/zen_example_transform.h"
-#include "Sandbox/Examples/Projection/zen_example_projection.h"
+//#include "Sandbox/Examples/Color/zen_example_color.h"
+//#include "Sandbox/Examples/Triangle/zen_example_triangle.h"
+//#include "Sandbox/Examples/ColorInterpolation/zen_example_color_interpolation.h"
+//#include "Sandbox/Examples/Transform/zen_example_transform.h"
+//#include "Sandbox/Examples/Projection/zen_example_projection.h"
 #include "Sandbox/Examples/Camera/zen_example_camera.h"
 
 
@@ -83,6 +83,7 @@ void Zen::ZSandbox::OnClose()
 
 void Zen::ZSandbox::Examples()
 {
+    /*
     if(ImGui::Button("Color"))
     {
         _activeSandbox = new Zen_Example_Color();
@@ -103,7 +104,9 @@ void Zen::ZSandbox::Examples()
     {
         _activeSandbox = new Zen_Example_Projection();
     }
-    else if (ImGui::Button("Camera"))
+     */
+    
+    if (ImGui::Button("Camera"))
     {
         _activeSandbox = new Zen_Example_Camera();
     }

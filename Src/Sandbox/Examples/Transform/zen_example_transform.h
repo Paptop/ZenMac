@@ -12,7 +12,7 @@
 #include "Math/ZPipeline.h"
 
 #include "IO/ZFileLoader.h"
-#include "GL/ZShaderGL.h"
+#include "Graphics/GL/ZShaderGL.h"
 
 namespace Zen
 {
@@ -20,13 +20,12 @@ namespace Zen
     {
     public:
         Zen_Example_Transform()
-        : _shader()
-        , _VBO(-1)
+        : _VBO(-1)
         , _VAO(-1)
         {
             const std::string& vertShader = Zen::ZFileLoader::LoadTextFile(_vertPath);
             const std::string& fragShader = Zen::ZFileLoader::LoadTextFile(_fragPath);
-            _shader.MakeProgram(vertShader.c_str(), fragShader.c_str());
+            GL::MakeProgram(_zsh, vertShader.c_str(), fragShader.c_str());
             
             _aVertex[0] = {-0.5f ,-0.5f, 0.0f};
             _aVertex[1] = {0.0f , 0.5f, 0.0f};
@@ -56,9 +55,9 @@ namespace Zen
             _pipe.SetTranslation(_translations);
             
             _pipe.GetTransform(_mvp);
-            _shader.SetMatrix4f("mvp", _mvp);
+            GL::SetMatrix4f(_zsh,"mvp", _mvp);
+            GL::Use(_zsh);
             
-            _shader.Use();
             glBindVertexArray(_VAO);
             glDrawArrays(GL_TRIANGLES, 0, 3);
         }
@@ -83,14 +82,14 @@ namespace Zen
         
         
     private:
-        ZShaderGL   _shader;
-        ZVector3f   _aVertex[4];
-        ZMatrix4f   _mvp;
-        ZPipeline   _pipe;
-        const char* _vertPath = "/Users/iljajurchenko/Dev/Zen/Src/Sandbox/Examples/Transform/GLSL/translation.vert";
-        const char* _fragPath = "/Users/iljajurchenko/Dev/Zen/Src/Sandbox/Examples/Transform/GLSL/translation.frag";
-        u32         _VBO;
-        u32         _VAO;
+        GL::ZShaderGL   _zsh;
+        ZVector3f       _aVertex[4];
+        ZMatrix4f       _mvp;
+        ZPipeline       _pipe;
+        const char*     _vertPath = "/Users/iljajurchenko/Dev/Zen/Src/Sandbox/Examples/Transform/GLSL/translation.vert";
+        const char*     _fragPath = "/Users/iljajurchenko/Dev/Zen/Src/Sandbox/Examples/Transform/GLSL/translation.frag";
+        uint32_t        _VBO;
+        uint32_t        _VAO;
         
         //Specific
         ZVector3f   _rotations;

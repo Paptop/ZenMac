@@ -10,7 +10,7 @@
 #include "Math/ZVector.h"
 
 #include "IO/ZFileLoader.h"
-#include "GL/ZShaderGL.h"
+#include "Graphics/GL/ZShaderGL.h"
 
 namespace Zen
 {
@@ -21,7 +21,7 @@ namespace Zen
         {
             const std::string& vertShader = Zen::ZFileLoader::LoadTextFile(_vertPath);
             const std::string& fragShader = Zen::ZFileLoader::LoadTextFile(_fragPath);
-            _shader.MakeProgram(vertShader.c_str(), fragShader.c_str());
+            GL::MakeProgram(_sh, vertShader.c_str(), fragShader.c_str());
     
             _aVertex[0] = {-0.5f ,-0.5f, 0.0f};
             _aVertex[1] = {0.0f , 0.5f, 0.0f};
@@ -46,7 +46,7 @@ namespace Zen
             glClearColor(0.0f, 0.0f, 0.0f, 0.0f);
             glClear(GL_COLOR_BUFFER_BIT);
             
-            _shader.Use();
+            GL::Use(_sh);
             glBindVertexArray(_VAO);
             glDrawArrays(GL_TRIANGLES, 0, 3);
         }
@@ -57,12 +57,12 @@ namespace Zen
         }
         
     private:
-        ZShaderGL   _shader;
-        ZVector3f   _aVertex[3];
-        const char* _vertPath = "/Users/iljajurchenko/Dev/Zen/Src/Sandbox/Examples/ColorInterpolation/GLSL/triangle.vert";
-        const char* _fragPath = "/Users/iljajurchenko/Dev/Zen/Src/Sandbox/Examples/ColorInterpolation/GLSL/triangle.frag";
-        u32         _VBO;
-        u32         _VAO;
+        GL::ZShaderGL   _sh;
+        ZVector3f       _aVertex[3];
+        const char*     _vertPath = "/Users/iljajurchenko/Dev/Zen/Src/Sandbox/Examples/ColorInterpolation/GLSL/triangle.vert";
+        const char*     _fragPath = "/Users/iljajurchenko/Dev/Zen/Src/Sandbox/Examples/ColorInterpolation/GLSL/triangle.frag";
+        uint32_t        _VBO;
+        uint32_t        _VAO;
     };
 }
 #endif // zen_example_color_interpolation_h

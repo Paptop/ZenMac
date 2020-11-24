@@ -10,7 +10,7 @@
 #include "Math/ZVector.h"
 
 #include "IO/ZFileLoader.h"
-#include "GL/ZShaderGL.h"
+#include "Graphics/GL/ZShaderGL.h"
 
 namespace Zen
 {
@@ -18,13 +18,12 @@ namespace Zen
     {
     public:
         Zen_Example_Triangle()
-        : _shader()
-        , _VBO(-1)
+        : _VBO(-1)
         , _VAO(-1)
         {
-            const std::string& vertShader = Zen::ZFileLoader::LoadTextFile(_vertPath);
-            const std::string& fragShader = Zen::ZFileLoader::LoadTextFile(_fragPath);
-            _shader.MakeProgram(vertShader.c_str(), fragShader.c_str());
+            const std::string& vertShader = ZFileLoader::LoadTextFile(_vertPath);
+            const std::string& fragShader = ZFileLoader::LoadTextFile(_fragPath);
+            GL::MakeProgram(_zsh, vertShader.c_str(), fragShader.c_str());
             
             _fColor[0] = 0.0f; _fColor[1] = 1.0f; _fColor[2] = 0.0f;
             
@@ -51,8 +50,8 @@ namespace Zen
             glClearColor(0.0f, 0.0f, 0.0f, 0.0f);
             glClear(GL_COLOR_BUFFER_BIT);
             
-            _shader.Use();
-            _shader.SetVector3f("zColor", _fColor);
+            GL::Use(_zsh);
+            GL::SetVector3f(_zsh, "zColor", _fColor);
             glBindVertexArray(_VAO);
             
             glBindBuffer(GL_ARRAY_BUFFER, _VBO);
@@ -83,13 +82,13 @@ namespace Zen
         }
         
     private:
-        ZShaderGL   _shader;
-        ZVector3f   _aVertex[3];
-        float       _fColor[3];
-        const char* _vertPath = "/Users/iljajurchenko/Dev/Zen/Src/Sandbox/Examples/Triangle/GLSL/triangle.vert";
-        const char* _fragPath = "/Users/iljajurchenko/Dev/Zen/Src/Sandbox/Examples/Triangle/GLSL/triangle.frag";
-        u32         _VBO;
-        u32         _VAO;
+        GL::ZShaderGL   _zsh;
+        ZVector3f       _aVertex[3];
+        float           _fColor[3];
+        const char*     _vertPath = "/Users/iljajurchenko/Dev/Zen/Src/Sandbox/Examples/Triangle/GLSL/triangle.vert";
+        const char*     _fragPath = "/Users/iljajurchenko/Dev/Zen/Src/Sandbox/Examples/Triangle/GLSL/triangle.frag";
+        uint32_t        _VBO;
+        uint32_t        _VAO;
     };
     
 };

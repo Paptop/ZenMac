@@ -98,6 +98,7 @@
 		F72C96AE2436454900146D4C /* camera.vert */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = camera.vert; sourceTree = "<group>"; };
 		F72C96AF2436455A00146D4C /* camera.frag */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = camera.frag; sourceTree = "<group>"; };
 		F72C96B02436499900146D4C /* ZCamera.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZCamera.h; sourceTree = "<group>"; };
+		F73245A5256D203A00887E29 /* ZGL_Types.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZGL_Types.h; sourceTree = "<group>"; };
 		F738A82F249BB92400F7A972 /* ZSort.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZSort.h; sourceTree = "<group>"; };
 		F738A832249BBB0E00F7A972 /* ZTestAlgo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZTestAlgo.h; sourceTree = "<group>"; };
 		F743EE802396E3EF0025492C /* Zen */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Zen; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -212,6 +213,7 @@
 			children = (
 				F7199514239CE312009314C3 /* ZShaderGL.h */,
 				F7199515239CE382009314C3 /* ZShaderGL.cpp */,
+				F73245A5256D203A00887E29 /* ZGL_Types.h */,
 			);
 			path = GL;
 			sourceTree = "<group>";
@@ -347,6 +349,14 @@
 			path = GLSL;
 			sourceTree = "<group>";
 		};
+		F73245A4256D200800887E29 /* Graphics */ = {
+			isa = PBXGroup;
+			children = (
+				F7199513239CE2ED009314C3 /* GL */,
+			);
+			path = Graphics;
+			sourceTree = "<group>";
+		};
 		F738A82E249BB90A00F7A972 /* ZAlgo */ = {
 			isa = PBXGroup;
 			children = (
@@ -381,11 +391,11 @@
 		F743EE822396E3EF0025492C /* Src */ = {
 			isa = PBXGroup;
 			children = (
+				F73245A4256D200800887E29 /* Graphics */,
 				F738A82E249BB90A00F7A972 /* ZAlgo */,
 				F7199522239D1B24009314C3 /* Math */,
 				F719951A239D0E63009314C3 /* IO */,
 				F7199517239CE4CD009314C3 /* Utils */,
-				F7199513239CE2ED009314C3 /* GL */,
 				F719950B239BF208009314C3 /* Sandbox */,
 				F743EE832396E3EF0025492C /* main.cpp */,
 			);

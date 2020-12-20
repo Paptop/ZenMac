@@ -13,7 +13,6 @@
 		F7199511239BF58D009314C3 /* ZSandbox.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F7199510239BF58D009314C3 /* ZSandbox.cpp */; };
 		F7199516239CE382009314C3 /* ZShaderGL.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F7199515239CE382009314C3 /* ZShaderGL.cpp */; };
 		F719951D239D0EDF009314C3 /* ZFileLoader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F719951C239D0EDF009314C3 /* ZFileLoader.cpp */; };
-		F719953523A663D1009314C3 /* ZPipeline.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F719953423A663D1009314C3 /* ZPipeline.cpp */; };
 		F72C96AA2436070A00146D4C /* ZMath.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F72C96A92436070A00146D4C /* ZMath.cpp */; };
 		F743EE842396E3EF0025492C /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F743EE832396E3EF0025492C /* main.cpp */; };
 		F743F2602396E4DF0025492C /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F743F25F2396E4DF0025492C /* OpenGL.framework */; };
@@ -78,13 +77,9 @@
 		F719951C239D0EDF009314C3 /* ZFileLoader.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ZFileLoader.cpp; sourceTree = "<group>"; };
 		F7199520239D0FB5009314C3 /* triangle.vert */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = triangle.vert; sourceTree = "<group>"; };
 		F7199521239D0FC2009314C3 /* triangle.frag */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = triangle.frag; sourceTree = "<group>"; };
-		F7199523239D1B3C009314C3 /* ZVector.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZVector.h; sourceTree = "<group>"; };
 		F7199528239D2E3A009314C3 /* zen_example_color_interpolation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = zen_example_color_interpolation.h; sourceTree = "<group>"; };
 		F7199529239D2FAD009314C3 /* triangle.vert */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = triangle.vert; sourceTree = "<group>"; };
 		F719952A239D2FBC009314C3 /* triangle.frag */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = triangle.frag; sourceTree = "<group>"; };
-		F719952E23A65C8C009314C3 /* ZMatrix.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZMatrix.h; sourceTree = "<group>"; };
-		F719953323A663C4009314C3 /* ZPipeline.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZPipeline.h; sourceTree = "<group>"; };
-		F719953423A663D1009314C3 /* ZPipeline.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ZPipeline.cpp; sourceTree = "<group>"; };
 		F719953623A66C9A009314C3 /* ZMath.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZMath.h; sourceTree = "<group>"; };
 		F72C969F2435E65600146D4C /* zen_example_transform.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = zen_example_transform.h; sourceTree = "<group>"; };
 		F72C96A12435E65600146D4C /* translation.vert */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = translation.vert; sourceTree = "<group>"; };
@@ -92,12 +87,10 @@
 		F72C96A52435E6F500146D4C /* zen_example_projection.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = zen_example_projection.h; sourceTree = "<group>"; };
 		F72C96A62435E72100146D4C /* projection.vert */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = projection.vert; sourceTree = "<group>"; };
 		F72C96A72435E72F00146D4C /* projection.frag */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = projection.frag; sourceTree = "<group>"; };
-		F72C96A82436017700146D4C /* ZProjection.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZProjection.h; sourceTree = "<group>"; };
 		F72C96A92436070A00146D4C /* ZMath.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ZMath.cpp; sourceTree = "<group>"; };
 		F72C96AD2436452A00146D4C /* zen_example_camera.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = zen_example_camera.h; sourceTree = "<group>"; };
 		F72C96AE2436454900146D4C /* camera.vert */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = camera.vert; sourceTree = "<group>"; };
 		F72C96AF2436455A00146D4C /* camera.frag */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = camera.frag; sourceTree = "<group>"; };
-		F72C96B02436499900146D4C /* ZCamera.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZCamera.h; sourceTree = "<group>"; };
 		F73245A5256D203A00887E29 /* ZGL_Types.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZGL_Types.h; sourceTree = "<group>"; };
 		F73245A6256D49EF00887E29 /* ZMath_types.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZMath_types.h; sourceTree = "<group>"; };
 		F738A82F249BB92400F7A972 /* ZSort.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZSort.h; sourceTree = "<group>"; };
@@ -258,14 +251,8 @@
 		F7199522239D1B24009314C3 /* Math */ = {
 			isa = PBXGroup;
 			children = (
-				F7199523239D1B3C009314C3 /* ZVector.h */,
-				F719952E23A65C8C009314C3 /* ZMatrix.h */,
-				F719953323A663C4009314C3 /* ZPipeline.h */,
-				F719953423A663D1009314C3 /* ZPipeline.cpp */,
 				F719953623A66C9A009314C3 /* ZMath.h */,
-				F72C96A82436017700146D4C /* ZProjection.h */,
 				F72C96A92436070A00146D4C /* ZMath.cpp */,
-				F72C96B02436499900146D4C /* ZCamera.h */,
 				F73245A6256D49EF00887E29 /* ZMath_types.h */,
 			);
 			path = Math;
@@ -630,7 +617,6 @@
 				F7199516239CE382009314C3 /* ZShaderGL.cpp in Sources */,
 				F719950A239BEB90009314C3 /* imgui_impl_opengl3.cpp in Sources */,
 				F7199506239BEB11009314C3 /* imgui_impl_glfw.cpp in Sources */,
-				F719953523A663D1009314C3 /* ZPipeline.cpp in Sources */,
 				F743F357239BDF770025492C /* imgui_stdlib.cpp in Sources */,
 				F743F356239BDF770025492C /* imgui_freetype.cpp in Sources */,
 				F743F35A239BDF770025492C /* imgui.cpp in Sources */,
@@ -767,7 +753,7 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "c++14";
 				CODE_SIGN_ENTITLEMENTS = Zen.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = ACY38URH26;
+				DEVELOPMENT_TEAM = JQGA96MW59;
 				ENABLE_HARDENED_RUNTIME = YES;
 				HEADER_SEARCH_PATHS = (
 					/usr/local/include,
@@ -790,7 +776,7 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "c++14";
 				CODE_SIGN_ENTITLEMENTS = Zen.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = ACY38URH26;
+				DEVELOPMENT_TEAM = JQGA96MW59;
 				ENABLE_HARDENED_RUNTIME = YES;
 				HEADER_SEARCH_PATHS = (
 					/usr/local/include,

@@ -8,9 +8,6 @@
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
 
-#include "Math/ZMatrix.h"
-#include "Math/ZVector.h"
-#include "Math/ZPipeline.h"
 #include "Math/ZMath.h"
 
 #include "IO/ZFileLoader.h"
@@ -75,9 +72,9 @@ namespace Zen
             glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, _IBO);
             glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(_aIndices), _aIndices, GL_STATIC_DRAW);
             
-            _scale = {1.0f, 1.0f, 1.0f};
-            _translations = {0.0f, 0.0f, 0.0f};
-            _rotations = {0.0f, 0.0f, 0.0f};
+            _transform.scale = {1.0f, 1.0f, 1.0f};
+            _transform.pos   = {0.0f, 0.0f, 0.0f};
+            _transform.rot   = {0.0f, 0.0f, 0.0f};
         }
         
         virtual void Render() override
@@ -87,12 +84,13 @@ namespace Zen
             glClearColor(0.0f, 0.0f, 0.0f, 0.0f);
             glClear(GL_COLOR_BUFFER_BIT);
             
-            _pipe.SetScale(_scale);
-            _pipe.SetRotation(_rotations);
-            _pipe.SetTranslation(_translations);
             
-            _pipe.GetTransform(_mvp);
-            GL::SetMatrix4f(_zsh, "mvp", _mvp);
+            //_pipe.SetScale(_scale);
+            //_pipe.SetRotation(_rotations);
+            //_pipe.SetTranslation(_translations);
+            
+            //_pipe.GetTransform(_mvp);
+            //GL::SetMatrix4f(_zsh, "mvp", _mvp);
             
             GL::Use(_zsh);
             glBindVertexArray(_VAO);
@@ -101,6 +99,7 @@ namespace Zen
         
         virtual void RenderGUI() override
         {
+            /*
             ImGui::Begin("Zen_Example_Triangle");
             
             ImGui::SliderFloat("RotationX", &_rotations.x, -360.0f, 360.0f);
@@ -126,6 +125,7 @@ namespace Zen
             ImGui::SliderFloat("CameraPosX", &_position.x, -10.0f, 10.0f);
             ImGui::SliderFloat("CameraPosY", &_position.y, -10.0f, 10.0f);
             ImGui::SliderFloat("CameraPosZ", &_position.z, -10.0f, 10.0f);
+             */
         }
         
         virtual void KeyPressed(int key, int action) override
@@ -174,13 +174,8 @@ namespace Zen
         float       _fProgress;
         
         //Specific
-        ZVector3f   _rotations;
-        ZVector3f   _translations;
-        ZVector3f   _scale;
-        
-        ZVector3f   _upVector = {0.0f, 1.0f, 0.0f};
-        ZVector3f   _targetVector = {-0.45f, 0.0f, 1.0f};
-        ZVector3f   _position = {1.0f, 1.0f, -3.0f};
+        ZTransform      _transform;
+        ZCamera         _camera;
     };
 }
 

@@ -26,6 +26,9 @@ namespace Zen{ namespace Math{
     //3D
     void CalcProjection(ZMat4f& res, const ZProjection& proj);
     void CalcCameraTransform(ZMat4f& mat, const ZVec3f& target, const ZVec3f& up);
+    void CalcMVP(ZMat4f& mvp, const Math::ZTransform& transform,
+                              const Math::ZCamera& camera,
+                              const Math::ZProjection& projection);
 
 }}
 

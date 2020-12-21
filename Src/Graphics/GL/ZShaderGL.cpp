@@ -37,7 +37,7 @@ namespace Zen { namespace GL{
         glUniform3fv(glGetUniformLocation(sh._id, name), 1, values);
     }
 
-    void SetMatrix4f(const ZShaderGL& sh, const char* name, const ZMatrix4f& mat)
+    void SetMatrix4f(const ZShaderGL& sh, const char* name, const Math::ZMat4f& mat)
     {
         glUniformMatrix4fv(glGetUniformLocation(sh._id, name), 1, GL_TRUE, &mat.m[0][0]);
     }

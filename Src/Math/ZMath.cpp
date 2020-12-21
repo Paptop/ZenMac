@@ -48,16 +48,22 @@ namespace Zen { namespace Math {
     {
         ZMat4f rotX, rotY, rotZ;
         
-        rotZ[0][0] = cos(rotation.z);  rotZ[0][1] = -sin(rotation.z);
-        rotZ[1][0] = sin(rotation.z);  rotZ[1][1] = cos(rotation.z);
+        float rx = TO_RAD(rotation.x);
+        float ry = TO_RAD(rotation.y);
+        float rz = TO_RAD(rotation.z);
         
-        rotY[0][0] = cos(rotation.y);  rotY[0][2] = -sin(rotation.y);
-        rotY[2][0] = sin(rotation.y);  rotY[2][2] = cos(rotation.y);
+        rotZ[0][0] = cos(rz);  rotZ[0][1] = -sin(rz);
+        rotZ[1][0] = sin(rz);  rotZ[1][1] = cos(rz);
         
-        rotX[1][1] = cos(rotation.x);  rotX[1][2] = -sin(rotation.x);
-        rotX[2][1] = sin(rotation.x);  rotX[2][2] = cos(rotation.x);
+        rotY[0][0] = cos(ry);  rotY[0][2] = -sin(ry);
+        rotY[2][0] = sin(ry);  rotY[2][2] = cos(ry);
         
-        res *= rotX; res *= rotY; res *= rotZ;
+        rotX[1][1] = cos(rx);  rotX[1][2] = -sin(rx);
+        rotX[2][1] = sin(rx);  rotX[2][2] = cos(rx);
+        
+        res *= rotZ;
+        res *= rotY;
+        res *= rotX;
     }
 
     void EmptyM4f(ZMat4f& mat)
@@ -80,7 +86,7 @@ namespace Zen { namespace Math {
         const float zNear = proj.zNear;
         const float zFar = proj.zFar;
         const float zRange = zNear - zFar;
-        const float tanHalfFOV = tanf(TO_RAD(proj.fov / 2.0));
+        const float tanHalfFOV = tanf(TO_RAD(proj.fov / 2.0f));
         
         res.m[0][0] = 1.0f / (tanHalfFOV * ar);
         res.m[0][1] = 0.0f;
@@ -132,5 +138,31 @@ namespace Zen { namespace Math {
         mat[3][1] = 0.0f;
         mat[3][2] = 0.0f;
         mat[3][3] = 1.0f;
+    }
+
+
+    void CalcMVP(ZMat4f& mvp, const Math::ZTransform& transform,
+                              const Math::ZCamera& camera,
+                              const Math::ZProjection& projection)
+    {
+        
+        ZMat4f trans, rot, scale, proj, cameraT, cameraR;
+        
+        SetTranslation(trans, transform.pos);
+        SetTranslation(cameraT, camera.pos);
+        
+        SetRotation(rot, transform.rot);
+        SetScale(scale, transform.scale);
+        
+        CalcProjection(proj, projection);
+        CalcCameraTransform(cameraR, camera.target, camera.up);
+        
+        mvp *= proj;
+        mvp *= cameraR;
+        mvp *= cameraT;
+        mvp *= trans;
+        mvp *= rot;
+        mvp *= scale;
+        
     }
 }}

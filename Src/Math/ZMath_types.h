@@ -19,18 +19,51 @@ namespace Zen { namespace Math {
         
         ZMat4f& operator*=(const ZMat4f& right)
         {
+            ZMat4f res;
             for(int i = 0; i < 4; ++i)
             {
                 for(int j = 0; j < 4; ++j)
                 {
-                    m[i][j] = m[i][0] * right.m[0][j] +
-                              m[i][1] * right.m[1][j] +
-                              m[i][2] * right.m[2][j] +
-                              m[i][3] * right.m[3][j];
+                    res.m[i][j] = m[i][0] * right.m[0][j] +
+                                  m[i][1] * right.m[1][j] +
+                                  m[i][2] * right.m[2][j] +
+                                  m[i][3] * right.m[3][j];
                 }
             }
             
+            (*this) = res;
             return (*this);
+        }
+        
+        ZMat4f operator*(const ZMat4f& right)
+        {
+            ZMat4f res;
+            for(int i = 0; i < 4; ++i)
+            {
+                for(int j = 0; j < 4; ++j)
+                {
+                    res.m[i][j] = m[i][0] * right.m[0][j] +
+                                  m[i][1] * right.m[1][j] +
+                                  m[i][2] * right.m[2][j] +
+                                  m[i][3] * right.m[3][j];
+                }
+            }
+            
+            return res;
+        }
+        
+        bool operator==(const ZMat4f& right)
+        {
+            bool bEqual = true;
+            for(int i = 0 ; i < 4; ++i)
+            {
+                for(int j = 0 ; j < 4; ++j)
+                {
+                    bEqual &= m[i][j] == right[i][j];
+                }
+            }
+            
+            return bEqual;
         }
         
         const float* operator[](int row) const { return m[row]; }

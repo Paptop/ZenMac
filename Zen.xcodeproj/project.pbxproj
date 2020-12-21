@@ -797,7 +797,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = ACY38URH26;
+				DEVELOPMENT_TEAM = JQGA96MW59;
 				ENABLE_HARDENED_RUNTIME = YES;
 				HEADER_SEARCH_PATHS = (
 					/Users/iljajurchenko/Dev/Zen/External/googletest/googlemock/include,
@@ -816,7 +816,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = ACY38URH26;
+				DEVELOPMENT_TEAM = JQGA96MW59;
 				ENABLE_HARDENED_RUNTIME = YES;
 				HEADER_SEARCH_PATHS = (
 					/Users/iljajurchenko/Dev/Zen/External/googletest/googlemock/include,

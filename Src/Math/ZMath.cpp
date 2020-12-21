@@ -61,9 +61,7 @@ namespace Zen { namespace Math {
         rotX[1][1] = cos(rx);  rotX[1][2] = -sin(rx);
         rotX[2][1] = sin(rx);  rotX[2][2] = cos(rx);
         
-        res *= rotZ;
-        res *= rotY;
-        res *= rotX;
+        res = rotZ * rotY * rotX;
     }
 
     void EmptyM4f(ZMat4f& mat)
@@ -113,8 +111,8 @@ namespace Zen { namespace Math {
     {
         ZVec3f N = target;
         Normalize(N);
-        ZVec3f U = up;
-        Cross(U,U,target);
+        ZVec3f U;
+        Cross(U,up,target);
         Normalize(U);
         ZVec3f V;
         Cross(V,N,U);
@@ -149,20 +147,13 @@ namespace Zen { namespace Math {
         ZMat4f trans, rot, scale, proj, cameraT, cameraR;
         
         SetTranslation(trans, transform.pos);
-        SetTranslation(cameraT, camera.pos);
-        
         SetRotation(rot, transform.rot);
         SetScale(scale, transform.scale);
         
+        SetTranslation(cameraT, {-camera.pos.x, -camera.pos.y, -camera.pos.z});
         CalcProjection(proj, projection);
         CalcCameraTransform(cameraR, camera.target, camera.up);
         
-        mvp *= proj;
-        mvp *= cameraR;
-        mvp *= cameraT;
-        mvp *= trans;
-        mvp *= rot;
-        mvp *= scale;
-        
+        mvp = proj * cameraT * cameraR * trans * rot * scale;
     }
 }}

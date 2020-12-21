@@ -72,12 +72,12 @@ namespace Zen
             glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, _IBO);
             glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(_aIndices), _aIndices, GL_STATIC_DRAW);
             
-            _transform.pos = {0.0f, 0.0f, 0.0f};
-            _transform.rot = {45.0f, 0.0f, 0.0f};
+            _transform.pos = {0.0f, 0.0f, 10.0f};
+            _transform.rot = {0.0f, 0.0f, 0.0f};
             _transform.scale = {1.0f, 1.0f, 1.0f};
             
             _camera.pos = {0.0f, 0.0f, 0.0f};
-            _camera.target = {0.45f, 0.0f, 1.0f};
+            _camera.target = {0.0f, 0.0f, 1.0f};
             _camera.up = {0.0f, 1.0f, 0.0f};
         }
         
@@ -88,9 +88,9 @@ namespace Zen
             glClearColor(0.0f, 0.0f, 0.0f, 0.0f);
             glClear(GL_COLOR_BUFFER_BIT);
             
-            Math::Identity(_mvp);
             Math::CalcMVP(_mvp, _transform, _camera, _projection);
             GL::SetMatrix4f(_zsh, "mvp", _mvp);
+            
             GL::Use(_zsh);
             glBindVertexArray(_VAO);
             glDrawElements(GL_TRIANGLES, sizeof(_aIndices) / sizeof(int), GL_UNSIGNED_INT, 0);

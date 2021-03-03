@@ -12,6 +12,7 @@
 
 #include "IO/ZFileLoader.h"
 #include "Graphics/GL/ZShaderGL.h"
+#include "Graphics/GL/ZGL.h"
 
 namespace Zen
 {
@@ -57,20 +58,11 @@ namespace Zen
             _aIndices[16] = 4;
             _aIndices[17] = 0;
 
-
-            glGenVertexArrays(1, &_VAO);
-            glGenBuffers(1, &_VBO);
-            glBindVertexArray(_VAO);
-
-            glBindBuffer(GL_ARRAY_BUFFER, _VBO);
-            glBufferData(GL_ARRAY_BUFFER, sizeof(_aVertex), _aVertex, GL_STATIC_DRAW);
-
-            glEnableVertexAttribArray(0);
-            glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, sizeof(Math::ZVec3f), 0);
-
-            glGenBuffers(1, &_IBO);
-            glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, _IBO);
-            glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(_aIndices), _aIndices, GL_STATIC_DRAW);
+            
+            GL::GenBindVertexArray(_VAO, 1);
+            GL::GenBindBuffer<Math::ZVec3f>(GL_ARRAY_BUFFER, _VBO, _aVertex);
+            GL::EnableAttributes(0, 3, GL_FLOAT, GL_FALSE, sizeof(Math::ZVec3f), 0);
+            GL::GenBindBuffer<int>(GL_ELEMENT_ARRAY_BUFFER, _IBO, _aIndices);
             
             _transform.pos = {0.0f, 0.0f, 10.0f};
             _transform.rot = {0.0f, 0.0f, 0.0f};
@@ -84,9 +76,7 @@ namespace Zen
         virtual void Render() override
         {
             UpdateAnimation(0.0f);
-            
-            glClearColor(0.0f, 0.0f, 0.0f, 0.0f);
-            glClear(GL_COLOR_BUFFER_BIT);
+            GL::Clear(GL_COLOR_BUFFER_BIT);
             
             Math::CalcMVP(_mvp, _transform, _camera, _projection);
             GL::SetMatrix4f(_zsh, "mvp", _mvp);

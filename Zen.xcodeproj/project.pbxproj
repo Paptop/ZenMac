@@ -148,6 +148,7 @@
 		F7E0135D23A676A00097F25C /* libgtest.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libgtest.a; path = External/googletest/mybuild/lib/libgtest.a; sourceTree = "<group>"; };
 		F7E0135E23A676A00097F25C /* libgmock.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libgmock.a; path = External/googletest/mybuild/lib/libgmock.a; sourceTree = "<group>"; };
 		F7E0136323A6B2B90097F25C /* ZTestMath.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZTestMath.h; sourceTree = "<group>"; };
+		F7EDD3A525EF928C0074F73B /* ZGL.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZGL.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -208,6 +209,7 @@
 				F7199514239CE312009314C3 /* ZShaderGL.h */,
 				F7199515239CE382009314C3 /* ZShaderGL.cpp */,
 				F73245A5256D203A00887E29 /* ZGL_Types.h */,
+				F7EDD3A525EF928C0074F73B /* ZGL.h */,
 			);
 			path = GL;
 			sourceTree = "<group>";

@@ -754,8 +754,9 @@
 			buildSettings = {
 				CLANG_CXX_LANGUAGE_STANDARD = "c++14";
 				CODE_SIGN_ENTITLEMENTS = Zen.entitlements;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = JQGA96MW59;
+				DEVELOPMENT_TEAM = ACY38URH26;
 				ENABLE_HARDENED_RUNTIME = YES;
 				HEADER_SEARCH_PATHS = (
 					/usr/local/include,
@@ -767,6 +768,7 @@
 					"$(PROJECT_DIR)/External/imgui/examples/libs/glfw/lib-vc2010-64",
 					"$(PROJECT_DIR)/External/imgui/examples/libs/glfw/lib-vc2010-32",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				USER_HEADER_SEARCH_PATHS = $SRCROOT/Src;
 			};
@@ -777,8 +779,9 @@
 			buildSettings = {
 				CLANG_CXX_LANGUAGE_STANDARD = "c++14";
 				CODE_SIGN_ENTITLEMENTS = Zen.entitlements;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = JQGA96MW59;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = ACY38URH26;
 				ENABLE_HARDENED_RUNTIME = YES;
 				HEADER_SEARCH_PATHS = (
 					/usr/local/include,
@@ -790,7 +793,9 @@
 					"$(PROJECT_DIR)/External/imgui/examples/libs/glfw/lib-vc2010-64",
 					"$(PROJECT_DIR)/External/imgui/examples/libs/glfw/lib-vc2010-32",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				USER_HEADER_SEARCH_PATHS = $SRCROOT/Src;
 			};
 			name = Release;
